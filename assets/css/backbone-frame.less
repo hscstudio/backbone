@@ -1,329 +1,14 @@
-//	Backbone v1.0, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
 //	==================================================
-//		#Variables
-//		#Mixins
-//		#Transitions
 //		#Box Model Fix
 //		#Document
 //		#Grid
 //		#Quickers
 //		#Typography
 //		#Forms
-//		#Header
-//		#Content
-//		#Footer
-//		#Scroll To Top
-
-
-//	#Variables
-//	==================================================
-
-	// Media Query Breakpoints
-		@large-desktop:		~"only screen and (min-width: 1200px)";
-		@desktop-tablet:	~"only screen and (max-width: 979px)";
-		@tablet-mobile: 	~"only screen and (max-width: 767px)";
-		@mobile:			~"only screen and (max-width: 479px)";
-
-	// Page
-		@primary-color: #0b8593;
-		@primary-color-grey: greyscale(@primary-color);
-
-		@background-color: #F2F2F2;
-
-	// Scrollbars (WebKit)
-		@-webkit-scrollbar-size: 10px;
-		@-webkit-scrollbar-radius: 10px;
-		@-webkit-scrollbar-color: darken(@primary-color, 13%);
-		@-webkit-scrollbar-color-hover: lighten(@-webkit-scrollbar-color, 5%);
-		@-webkit-scrollbar-color-active: darken(@-webkit-scrollbar-color, 5%);
-		@-webkit-scrollbar-track-color: lighten(@primary-color-grey, 30%);
-
-	// Scrollbars (IE)
-		@ie-scrollbar-face-color: darken(@primary-color, 13%);
-		@ie-scrollbar-3dlight-color: lighten(@ie-scrollbar-face-color, 10%);
-		@ie-scrollbar-highlight-color: lighten(@ie-scrollbar-face-color, 15%);
-		@ie-scrollbar-track-color: @primary-color-grey;
-		@ie-scrollbar-arrow-color: #FFFFFF;
-		@ie-scrollbar-shadow-color: darken(@ie-scrollbar-face-color, 10%);
-		@ie-scrollbar-dark-shadow-color: darken(@ie-scrollbar-face-color, 15%);
-
-	// Typography
-		@font-color: #7B7B7B;
-
-		@link-color: @primary-color;
-		@link-color-hover: lighten(@primary-color, 10%);
-
-		@horizontal-line-size: 1px;
-		@horizontal-line-style: solid;
-		@horizontal-line-color: #E2E2E2;
-
-		@h1-font-color: @primary-color;
-		@h2-font-color: @primary-color;
-		@h3-font-color: @primary-color;
-		@h4-font-color: @primary-color;
-		@h5-font-color: @primary-color;
-		@h6-font-color: @primary-color;
-
-		@blockquote-border-size: 5px;
-		@blockquote-border-style: solid;
-		@blockquote-border-color: #E2E2E2;
-		@blockquote-background-color: #FFFFFF;
-		@blockquote-font-color: #7B7B7B;
-
-	// Forms
-		@input-border-size: 1px;
-		@input-border-style: solid;
-		@input-border-color: #E2E2E2;
-		@input-border-color-hover: darken(#E2E2E2, 5%);
-		@input-border-color-focus: darken(#E2E2E2, 10%);
-		@input-background-color: #FFFFFF;
-		@input-font-color: #6B6B6B;
-
-		@button-border-size: 1px;
-		@button-border-style: solid;
-		@button-border-color: darken(@primary-color, 3%);
-		@button-border-color-hover: darken(@primary-color, 1%);
-		@button-border-color-click: darken(@primary-color, 6%);
-		@button-background-color: @primary-color;
-		@button-background-color-hover: lighten(@primary-color, 2%);
-		@button-background-color-click: darken(@primary-color, 3%);
-		@button-font-color: #FFFFFF;
-		@button-font-color-hover: #FFFFFF;
-		@button-font-color-click: #EEEEEE;
-
-	// JavaScript Disabled
-		@no-script-border-size: 1px;
-		@no-script-border-style: solid;
-		@no-script-border-color: darken(#FFF6BF, 13%);
-		@no-script-background-color: #FFF6BF;
-		@no-script-font-color: #7B7B7B;
-		@no-script-link-color: @primary-color;
-		@no-script-link-color-hover: lighten(@primary-color, 10%);
-
-
-//	#Mixins
-//	==================================================
-
-	// Content Selection
-		.content-selection() when (lightness(@primary-color) >= 70%) {
-			color: #000;
-			text-shadow: 1px 1px 0 #FFF;
-		}
-
-		.content-selection() when (lightness(@primary-color) < 70%) {
-			color: #FFF;
-			text-shadow: 1px 1px 0 #000;
-		}
-
-
-	// Box Model
-		.box-model(@type: border-box) {
-			-moz-box-sizing: @type;
-			-webkit-box-sizing: @type;
-			box-sizing: @type;
-		}
-
-	// Dimensions
-		.dimensions(@width: auto, @height: auto) {
-			width: @width;
-			height: @height;
-		}
-
-	// Position
-		.position-tl(@position: relative, @top: auto, @left: auto) {
-			position: @position;
-			top: @top;
-			left: @left;
-		}
-
-		.position-tr(@position: relative, @top: auto, @right: auto) {
-			position: @position;
-			top: @top;
-			right: @right;
-		}
-
-		.position-bl(@position: relative, @bottom: auto, @left: auto) {
-			position: @position;
-			bottom: @bottom;
-			left: @left;
-		}
-
-		.position-br(@position: relative, @bottom: auto, @right: auto) {
-			position: @position;
-			bottom: @bottom;
-			right: @right;
-		}
-
-	// Border Radius
-		.border-radius(@rad: 5px) {
-			-webkit-border-radius: @rad;
-			-moz-border-radius: @rad;
-			border-radius: @rad;
-		}
-
-		.border-radius-each(@top-left: 5px, @top-right: 5px, @bottom-right: 5x, @bottom-left: 5px) {
-			-webkit-border-top-left-radius: @top-left;
-			-webkit-border-top-right-radius: @top-right;
-			-webkit-border-bottom-right-radius: @bottom-right;
-			-webkit-border-bottom-left-radius: @bottom-left;
-			-moz-border-top-left-radius: @top-left;
-			-moz-border-top-right-radius: @top-right;
-			-moz-border-bottom-right-radius: @bottom-right;
-			-moz-border-bottom-left-radius: @bottom-left;
-			border-top-left-radius: @top-left;
-			border-top-right-radius: @top-right;
-			border-bottom-right-radius: @bottom-right;
-			border-bottom-left-radius: @bottom-left;
-		}
-
-	// Box Shadow
-		.box-shadow-alpha(@x: 0, @y: 0, @blur: 5px, @spread: 0, @r: 0, @g: 0, @b: 0, @alpha: .3) {
-			-webkit-box-shadow: @x @y @blur @spread rgba(@r, @g, @b, @alpha);
-			-moz-box-shadow: @x @y @blur @spread rgba(@r, @g, @b, @alpha);
-			box-shadow: @x @y @blur @spread rgba(@r, @g, @b, @alpha);
-		}
-
-		.box-shadow-hex(@x: 0px, @y: 0px, @blur: 5px, @spread: 0, @hex: #000000) {
-			-webkit-box-shadow: @x @y @blur @spread @hex;
-			-moz-box-shadow: @x @y @blur @spread @hex;
-			box-shadow: @x @y @blur @spread @hex;
-		}
-
-	// Text Shadow
-		.text-shadow-alpha(@x: 1px, @y: 1px, @blur: 0, @r: 0, @g: 0, @b: 0, @alpha: 1) {
-			text-shadow: @x @y @blur rgba(@r, @g, @b, @alpha);
-		}
-
-		.text-shadow-hex(@x: 1px, @y: 1px, @blur: 0, @hex: #000) {
-			text-shadow: @x @y @blur @hex;
-		}
-
-	// Gradients
-		.gradient-linear(@origin: top, @from: #FFFFFF, @to: #000000) {
-			background-color: @from;
-			background-image: -webkit-linear-gradient(@origin, @from, @to);
-			background-image: -moz-linear-gradient(@origin, @from, @to);
-			background-image: -o-linear-gradient(@origin, @from, @to);
-			background-image: -ms-linear-gradient(@origin, @from, @to);
-			background-image: linear-gradient(@origin, @from, @to);
-		}
-
-		.gradient-radial(@shape: circle, @from: #FFF, @to: #000) {
-			background: @from;
-			background: -webkit-radial-gradient(@shape, @from, @to);
-			background: -moz-radial-gradient(@shape, @from, @to);
-			background: -o-radial-gradient(@shape, @from, @to);
-			background: radial-gradient(@shape, @from, @to);
-
-		}
-
-		.gradient-overlay(@origin: top, @alpha: 0.2) {
-			background-image: -webkit-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-			background-image: -moz-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-			background-image: -o-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-			background-image: -ms-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-			background-image: linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-		}
-
-	// Opacity
-		.opacity(@opacity: .5) {
-			-webkit-opacity: @opacity;
-			-khtml-opacity: @opacity;
-			-moz-opacity: @opacity;
-			-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@opacity * 100)";
-			filter: ~"alpha(opacity=@opacity * 100)";
-			opacity: @opacity;
-		}
-
-	// Transition
-		.transition(@prop: all, @time: .2s, @ease: ease-in-out) {
-			-webkit-transition: @prop @time @ease;
-			-moz-transition: @prop @time @ease;
-			-o-transition: @prop @time @ease;
-			-ms-transition: @prop @time @ease;
-			transition: @prop @time @ease;
-		}
-
-		.transition-none(@prop: none) {
-			-webkit-transition: @prop;
-			-moz-transition: @prop;
-			-o-transition: @prop;
-			-ms-transition: @prop;
-			transition: @prop;
-		}
-
-	// Transform
-		.transform-all(@rotate: 0deg, @scale: 1, @skew-x: 0deg, @skew-y: 0deg, @translate-x: 0px, @translate-y: 0px) {
-			-webkit-transform: rotate(@rotate) scale(@scale) skewX(@skew-x) skewY(@skew-y) translateX(@translate-x) translateY(@translate-y);
-			-moz-transform: rotate(@rotate) scale(@scale) skewX(@skew-x) skewY(@skew-y) translateX(@translate-x) translateY(@translate-y);
-			-o-transform: rotate(@rotate) scale(@scale) skewX(@skew-x) skewY(@skew-y) translateX(@translate-x) translateY(@translate-y);
-			-ms-transform: rotate(@rotate) scale(@scale) skewX(@skew-x) skewY(@skew-y) translateX(@translate-x) translateY(@translate-y);
-			transform: rotate(@rotate) scale(@scale) skewX(@skew-x) skewY(@skew-y) translateX(@translate-x) translateY(@translate-y);
-		}
-
-	// Rotate
-		.rotate(@rotate: 0deg) {
-			-webkit-transform: rotate(@rotate);
-			-moz-transform: rotate(@rotate);
-			-o-transform: rotate(@rotate);
-			-ms-transform: rotate(@rotate);
-			transform: rotate(@rotate);
-		}
-
-	// Scale
-		.scale(@scale: 1) {
-			-webkit-transform: scale(@scale);
-			-moz-transform: scale(@scale);
-			-o-transform: scale(@scale);
-			-ms-transform: scale(@scale);
-			transform: scale(@scale);
-		}
-
-		.scale-x-y(@scale: 1, @x: 0, @y: 0) {
-			-webkit-transform: scale(@scale);
-			-webkit-transform-origin: @x @y;
-			-moz-transform: scale(@scale);
-			-moz-transform-origin: @x @y;
-			-o-transform: scale(@scale);
-			-o-transform-origin: @x @y;
-			-ms-transform: scale(@scale);
-			-ms-transform-origin: @x @y;
-			transform: scale(@scale);
-			transform-origin: @x @y;
-		}
-
-	// Skew
-		.skew(@x: 0deg, @y: 0deg) {
-			-webkit-transform: skewX(@skew-x) skewY(@skew-y);
-			-moz-transform: skewX(@skew-x) skewY(@skew-y);
-			-o-transform: skewX(@skew-x) skewY(@skew-y);
-			-ms-transform: skewX(@skew-x) skewY(@skew-y);
-			transform: skewX(@skew-x) skewY(@skew-y);
-		}
-
-	// Translate
-		.translate(@x: 0, @y: 0) {
-			-webkit-transform: translateX(@translate-x) translateY(@translate-y);
-			-moz-transform: translateX(@translate-x) translateY(@translate-y);
-			-o-transform: translateX(@translate-x) translateY(@translate-y);
-			-ms-transform: translateX(@translate-x) translateY(@translate-y);
-			transform: translateX(@translate-x) translateY(@translate-y);
-		}
-
-	// Reflect
-		.reflect(@length: 40%, @opacity: 0.2) {
-			-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(@length, transparent), to(rgba(255, 255, 255, @opacity)));
-		}
-	
-	
-//	#Transitions
-//	==================================================
-
-	// Assign `transition-none` as an element class or use the `.transition-none();` mixin
-		.transition-none { .transition-none(); }
 
 
 //	#Box Model Fix
@@ -462,6 +147,7 @@
 			&.tm-large		{ margin-top: 30px; }
 			&.tm-larger		{ margin-top: 40px; }
 
+			.one-whole,
 			.one-half,
 			.one-third,
 			.two-third,
@@ -487,8 +173,22 @@
 				&.tm-medium		{ margin-top: 20px; }
 				&.tm-large		{ margin-top: 30px; }
 				&.tm-larger		{ margin-top: 40px; }
+
+				&.boxed {
+					border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color;
+					padding: 20px;
+					background: @grid-boxed-background;
+
+					&.p-remove	{ padding: 0;    }
+					&.p-ten		{ padding: 10px; }
+					&.p-twenty	{ padding: 20px; }
+					&.p-thirty	{ padding: 30px; }
+					&.p-fourty	{ padding: 40px; }
+					&.p-fifty	{ padding: 50px; }
+				}
 			}
 
+			.one-whole		{ width: 100%;  }
 			.one-half		{ width: 460px; }
 			.one-third		{ width: 300px; }
 			.two-third		{ width: 620px; }
@@ -496,6 +196,7 @@
 			.two-quarter	{ width: 460px; }
 			.three-quarter	{ width: 700px; }
 
+			.one-whole,
 			.one-half.last,
 			.one-third.last,
 			.two-third.last,
@@ -516,13 +217,13 @@
 		}
 
 	// Percentage Grid
+		.one-whole-percent,
 		.one-half-percent,
 		.one-third-percent,
 		.two-third-percent,
 		.one-quarter-percent,
 		.two-quarter-percent,
 		.three-quarter-percent {
-			padding-right: 20px;
 			margin-bottom: 20px;
 			position: relative;
 			float: left;
@@ -541,8 +242,23 @@
 			&.tm-medium		{ margin-top: 20px; }
 			&.tm-large		{ margin-top: 30px; }
 			&.tm-larger		{ margin-top: 40px; }
+
+			&.boxed {
+				border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color;
+				border-right: 0;
+				padding: 20px;
+				background: @grid-boxed-background;
+
+				&.p-remove	{ padding: 0;    }
+				&.p-ten		{ padding: 10px; }
+				&.p-twenty	{ padding: 20px; }
+				&.p-thirty	{ padding: 30px; }
+				&.p-fourty	{ padding: 40px; }
+				&.p-fifty	{ padding: 50px; }
+			}
 		}
 
+		.one-whole-percent		{ width: 100%;   }
 		.one-half-percent		{ width: 50%;    }
 		.one-third-percent		{ width: 33.33%; }
 		.two-third-percent		{ width: 66.66%; }
@@ -550,14 +266,13 @@
 		.two-quarter-percent	{ width: 50%;    }
 		.three-quarter-percent	{ width: 75%;    }
 
+		.one-whole-percent,
 		.one-half-percent.last,
 		.one-third-percent.last,
 		.two-third-percent.last,
 		.one-quarter-percent.last,
 		.two-quarter-percent.last,
 		.three-quarter-percent.last {
-			padding-right: 0;
-
 			&:after {
 				display: block;
 				.dimensions(0, 0);
@@ -566,6 +281,8 @@
 				clear: both;
 				content: " ";
 			}
+
+			&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
 		}
 
 
@@ -610,7 +327,6 @@
 				.three-quarter {
 				 	width: 100%;
 					margin-right: 0;
-					float: none;
 				}
 			}
 
@@ -623,7 +339,8 @@
 				&.tablet {
 					width: 100%;
 					padding-right: 0;
-					float: none;
+
+					&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
 				}
 			}
 		}
@@ -638,7 +355,8 @@
 				&.mobile {
 					width: 100%;
 					padding-right: 0;
-					float: none;
+
+					&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
 				}
 			}
 		}
@@ -758,7 +476,7 @@
 		}
 
 	// Weighted Text
-		b		{ font-weight: 600; }
+		b,
 		strong	{ font-weight: 700; }
 
 	// Horizontal Rules
@@ -851,17 +569,20 @@
 	// Quotes
 		blockquote {
 			outline: 0;
-			margin: 0 20px 20px 20px;
+			margin: 0 0 20px 0;
 			border-left: @blockquote-border-size @blockquote-border-style @blockquote-border-color;
 			padding: 20px;
 			background: @blockquote-background-color;
 			color: @blockquote-font-color;
+			.transition(border-color, .2s, ease-in-out);
 		
 			&:before,
 			&:after {
 				content: '';
 				content: none;
 			}
+
+			&:hover { border-color: @blockquote-border-color-hover; }
 
 			&.bm-remove		{ margin-bottom: 0;    }
 			&.bm-smaller	{ margin-bottom: 5px;  }
@@ -894,6 +615,8 @@
 
 	// Lists
 		ul, ol {
+			margin: 0 0 20px 0;
+
 			&:after {
 				display: block;
 				.dimensions(0, 0);
@@ -904,7 +627,7 @@
 			}
 
 			&.unstyled {
-				margin: 0;
+				margin: 0 0 20px 0;
 				padding: 0;
 				color: inherit;
 				list-style-type: none;
@@ -947,21 +670,27 @@
 
 	// Preformatted
 		code {
-			border: 1px solid #e2e2e2;
+			border: 1px solid #DDD;
 			.border-radius(3px);
 			padding: 2px;
 			background: #FFFFFF;
 			color: #DD1144;
 			white-space: nowrap;
+			.transition();
+
+			&:hover { border-color: darken(#DDD, 5%); }
 		}
 
 		pre {
 			margin: 0 auto 20px;
-			border: 1px solid #e2e2e2;
+			border: 1px solid #DDD;
 			.border-radius(3px);
 			background: #FFFFFF;
 			padding: 20px;
 			line-height: normal;
+			.transition();
+
+			&:hover { border-color: darken(#DDD, 5%); }
 
 			&.bm-remove		{ margin-bottom: 0;    }
 			&.bm-smaller	{ margin-bottom: 5px;  }
@@ -1024,7 +753,7 @@
 		select,
 		textarea {
 			display: block;
-			.dimensions(300px, 30px);
+			.dimensions(300px, 40px);
 			margin: 0 0 20px;
 			outline: none;
 			border: @input-border-size @input-border-style @input-border-color;
@@ -1058,8 +787,9 @@
 			&.tm-large		{ margin-top: 30px; }
 			&.tm-larger		{ margin-top: 40px; }
 
-			&.h-tall		{ height: 40px; }
-			&.h-taller		{ height: 50px; }
+			&.h-small		{ height: 30px; font-size: .8em; }
+			&.h-medium		{ height: 40px; font-size: 1em;  }
+			&.h-large		{ height: 50px; font-size: 1em;  }
 		}
 
 		input.w-small,
@@ -1090,15 +820,15 @@
 		select[multiple]	{ height: auto !important; }
 
 		textarea {
-			min-height: 80px;
+			min-height: 120px;
 			font-variant: normal !important;
 			text-transform: none !important;
 
 			&.mono		{ font-family: 'Courier New', Courier, monospace; }
 			&.no-resize	{ resize: none; }
 
-			&.h-tall	{ height: 120px; }
-			&.h-taller	{ height: 160px; }
+			&.h-small	{ height: 80px; }
+			&.h-large	{ height: 160px; }
 		}
 		
 		input[type="checkbox"],
@@ -1131,7 +861,7 @@
 		input[type="button"] {
 			display: inline-block;
 			min-width: 125px;
-			height: 30px;
+			height: 40px;
 			margin: 0 0 20px;
 			outline: none;
 			border: @button-border-size @button-border-style @button-border-color;
@@ -1166,8 +896,9 @@
 			&.w-large		{ min-width: 150px; }
 			&.w-full		{ width: 100%;      }
 
-			&.h-tall		{ height: 40px; }
-			&.h-taller		{ height: 50px; }
+			&.h-small		{ height: 30px; font-size: .8em; }
+			&.h-medium		{ height: 40px; font-size: 1em;  }
+			&.h-large		{ height: 50px; font-size: 1em;  }
 
 			&:hover {
 				border-color: @button-border-color-hover;
@@ -1184,10 +915,12 @@
 
 		.button,
 		a.button {
-			line-height: 30px;
+			line-height: 40px;
+			cursor: pointer;
 
-			&.h-tall	{ line-height: 40px; }
-			&.h-taller	{ line-height: 50px; }
+			&.h-small	{ line-height: 30px; }
+			&.h-medium	{ line-height: 40px; }
+			&.h-large	{ line-height: 50px; }
 		}
 
 	// Fix for odd Mozilla border & padding issues
@@ -1255,41 +988,3 @@
 				float: none;
 			}
 		}
-
-
-//	#Header
-//	==================================================
-
-
-
-//	#Content
-//	==================================================
-
-	#demo-grid {
-		.one-half,
-		.one-quarter,
-		.two-quarter,
-		.three-quarter,
-		.one-third,
-		.two-third,
-		.one-half-percent,
-		.one-quarter-percent,
-		.two-quarter-percent,
-		.three-quarter-percent,
-		.one-third-percent,
-		.two-third-percent {
-			background: @primary-color;
-			color: #FFF;
-			text-align: center;
-			cursor: pointer;
-
-			&:hover { background: lighten(@primary-color, 5%); }
-		}
-	}
-
-	
-	
-//	#Footer
-//	==================================================
-
-	

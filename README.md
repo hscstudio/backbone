@@ -1,9 +1,9 @@
-Backbone v1.0
+Backbone v1.1
 =============
 
 A simple to use HTML, LESS/CSS and JavaScript/jQuery responsive framework (or foundation/boilerplate) to help with rapid protyping and development of websites for use on Desktop, Laptops, Tablets and Mobile devices.
 
-**Demo:** http://www.cloud-eight.com/github/backbone/demo/
+**Demo:** http://www.cloud-eight.com/github/backbone/
 
 
 Usage

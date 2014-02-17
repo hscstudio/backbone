@@ -1,4 +1,4 @@
-/*	Responsive Tabs v1.0, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+/*	Responsive Tabs v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	======================================================================================= */
 
 /*	Table of Contents
@@ -10,33 +10,74 @@
 /*	#Reset
 //	================================================== */
 
-	.tabs {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-	}
+	/* Standard */
+		.tabs {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
 
-	.tabs li {
-		margin: 0;
-		text-align: center;
-		float: left;
-	}
+		.tabs.bm-remove		{ margin-bottom: 0;    }
+		.tabs.bm-smaller	{ margin-bottom: 5px;  }
+		.tabs.bm-small		{ margin-bottom: 10px; }
+		.tabs.bm-medium		{ margin-bottom: 20px; }
+		.tabs.bm-large		{ margin-bottom: 30px; }
+		.tabs.bm-large		{ margin-bottom: 40px; }
 
-	.tabs li a {
-		display: block;
-		height: 30px;
-		padding: 0 10px;
-		text-decoration: none;
-		line-height: 30px;
-	}
+		.tabs li {
+			width: 125px;
+			margin: 0;
+			text-align: center;
+			line-height: 50px;
+			float: left;
+		}
 
-	.tabs li.active { font-weight: bold; }
+		.tabs li a {
+			display: block;
+			padding: 0 10px;
+			text-decoration: none;
+		}
 
-	.tabs-content { margin-bottom: 40px; }
+		.tabs li.active { font-weight: bold; }
 
-	.tabs-content .tabs-panel { padding: 20px; }
+		.tabs-content { margin-bottom: 20px; }
 
-	.tabs-content .tabs-panel .tab-title { display: none; }
+		.tabs-content.bm-remove		{ margin-bottom: 0;    }
+		.tabs-content.bm-smaller	{ margin-bottom: 5px;  }
+		.tabs-content.bm-small		{ margin-bottom: 10px; }
+		.tabs-content.bm-medium		{ margin-bottom: 20px; }
+		.tabs-content.bm-large		{ margin-bottom: 30px; }
+		.tabs-content.bm-larger		{ margin-bottom: 40px; }
+
+		.tabs-content .tabs-panel { padding: 20px; }
+
+		.tabs-content .tabs-panel .tab-title { display: none; }
+
+	/* Tabs Left */
+		.tabs.tabs-left {
+			width: 150px;
+			float: left;
+		}
+
+		.tabs.tabs-left li {
+			text-align: left;
+			float: none;
+		}
+
+		.tabs-content.tabs-left { overflow: hidden; }
+
+	/* Tabs Right */
+		.tabs.tabs-right {
+			width: 150px;
+			float: right;
+		}
+
+		.tabs.tabs-right li {
+			text-align: right;
+			float: none;
+		}
+
+		.tabs-content.tabs-right { overflow: hidden; }
 
 	@media only screen and (max-width: 767px) {
 		.tabs li { display: none; }
@@ -49,31 +90,70 @@
 /*	#Themes
 //	================================================== */
 
-	#example-1 .tabs li {
-		width: 100px;
-		border: 1px solid #DDD;
-		border-right: 0;
-		background: #EEE;
-		cursor: pointer;
-		position: relative;
-		z-index: 999;
-	}
+	/* Standard */
+		.tabs-default .tabs li {
+			border: 1px solid #DDD;
+			border-right: 0;
+			background: #EEE;
+			cursor: pointer;
+			position: relative;
+			z-index: 999999;
+		}
 
-	#example-1 .tabs li:last-child {
-		border-right: 1px solid #DDD;
-	}
+		.tabs-default .tabs li:last-child {
+			border-right: 1px solid #DDD;
+		}
 
-	#example-1 .tabs li.active {
-		border-bottom: 1px solid #FFF;
-		background: #FFF;
-	}
+		.tabs-default .tabs li.active {
+			border-bottom: 1px solid #FFF;
+			background: #FFF;
+		}
 
-	#example-1 .tabs-content {
-		border: 1px solid #DDD;
-		background: #FFF;
-		position: relative;
-		top: -1px;
-		z-index: 99;
-	}
+		.tabs-default .tabs-content {
+			border: 1px solid #DDD;
+			background: #FFF;
+			position: relative;
+			top: -1px;
+			z-index: 999;
+		}
 
-	#example-1 .tabs-content .tab-title { color: #0b8593; }
+		.tabs-default .tabs-content .tab-title { color: #0B8593; }
+
+	/* Tabs Left */
+		.tabs-default .tabs.tabs-left { }
+
+		.tabs-default .tabs.tabs-left li {
+			width: 100%;
+			border-right: 1px solid #DDD;
+			border-bottom: 0;
+			line-height: 50px;
+		}
+
+		.tabs-default .tabs.tabs-left li:last-child { border-bottom: 1px solid #DDD; }
+
+		.tabs-default .tabs.tabs-left li.active { border-right: 1px solid #FFF;}
+
+		.tabs-default .tabs-content.tabs-left {
+			top: 0;
+			left: -1px;
+		}
+
+	/* Tabs Right */
+		.tabs-default .tabs.tabs-right { }
+
+		.tabs-default .tabs.tabs-right li {
+			width: 100%;
+			border-right: 1px solid #DDD;
+			border-bottom: 0;
+			border-left: 1px solid #DDD;
+			line-height: 50px;
+		}
+
+		.tabs-default .tabs.tabs-right li:last-child { border-bottom: 1px solid #DDD; }
+
+		.tabs-default .tabs.tabs-right li.active { border-left: 1px solid #FFF;}
+
+		.tabs-default .tabs-content.tabs-right {
+			top: 0;
+			right: -1px;
+		}
