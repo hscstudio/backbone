@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Backbone v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/ -->
+<!-- Backbone v1.2, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/ -->
 
 <!--[if lt IE 7 ]><html class="no-js ie ie6 " lang="en"><![endif]-->
 <!--[if IE 7 ]><html class="no-js ie ie7" lang="en"><![endif]-->
@@ -50,6 +50,7 @@
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/normalize.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="assets/css/tipsy.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/animations.min.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/responsive-tabs.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/responsive-accordion.css" rel="stylesheet" type="text/css" media="all" />
@@ -84,7 +85,7 @@
 	<!-- Header -->
 		<div class="container">
 			<div class="one-whole bm-remove">
-				<h1 class="bm-larger tm-larger text-center"><a href="https://github.com/hellojd/backbone" target="_blank">Backbone: A Responsive Framework v1.1</a></h1>
+				<h1 class="bm-larger tm-larger text-center"><a href="https://github.com/hellojd/backbone" target="_blank">Backbone: A Responsive Framework v1.2</a></h1>
 			</div>
 
 			<hr class="bm-larger" />
@@ -116,6 +117,7 @@
 								<a href="https://github.com/scottjehl/Respond" target="_blank">'respond.js'</a>,
 								<a href="https://gist.github.com/galambalazs/6477177" target="_blank">'smoothscroll.js'</a>,
 								<a href="http://jamesallardice.github.io/Placeholders.js/" target="_blank">'placeholders.js'</a>,
+								<a href="http://onehackoranother.com/projects/jquery/tipsy/" target="_blank">'tipsy'</a>,
 								<a href="https://github.com/joemottershaw/responsive-tabs" target="_blank">'Responsive Tabs'</a>,
 								<a href="https://github.com/joemottershaw/responsive-accordion" target="_blank">'Responsive Accordion'</a>,
 								<a href="https://github.com/joemottershaw/responsive-toggle" target="_blank">'Responsive Toggle'</a> and
@@ -539,6 +541,52 @@
 				<hr class="bm-larger" />
 
 
+			<h1>Tipsy (Text Tooltips)</h1>
+				<div class="clearfix">
+					<div class="one-whole">
+						<div class="indent-20">
+							<p class="bm-remove">
+								There are few pre-set classes that are linked to how the tooltip is displayed.
+								Below are 2 sets of examples showing tooltip positioning and it's display. Apply one of the classes to your element and then use the <code>data-tooltip</code> attribute with it's value of the text you wish to show in the tooltip.
+								For Backbone there has been some slight customization to this plugin, and the addition of the plugin option 'fadeSpeed' has been added, which can be adjusted in the 'backbone.js' file on tooltips with 'fade' set to 'true', this speed is based in milliseconds.
+								By default HTML is enabled and images are resized accordingly, however other elements may cause breakages or inconsistencies. Hover over the elements below to see the tooltip and it's class.
+								For further customization, please refer to the <a href="http://onehackoranother.com/projects/jquery/tipsy/" target="_blank">tipsy website</a> for documentation.
+							</p>
+						</div>
+					</div>
+
+					<p><strong>Show/Hide Examples</strong></p>
+						<div class="one-third boxed p-ten text-center tip-tl cursor-pointer" data-tooltip="Class `tip-tl`">North West</div>
+						<div class="one-third boxed p-ten text-center tip-t cursor-pointer" data-tooltip="Class `tip-t`">North</div>
+						<div class="one-third boxed p-ten text-center last tip-tr cursor-pointer" data-tooltip="Class `tip-tr`">North East</div>
+
+						<div class="one-third boxed p-ten text-center tip-l cursor-pointer" data-tooltip="Class `tip-l`">West</div>
+						<div class="one-third">&nbsp;</div>
+						<div class="one-third boxed p-ten text-center last tip-r cursor-pointer" data-tooltip="Class `tip-r`">East</div>
+
+						<div class="one-third boxed p-ten text-center tip-bl cursor-pointer" data-tooltip="Class `tip-bl`">South West</div>
+						<div class="one-third boxed p-ten text-center tip-b cursor-pointer" data-tooltip="Class `tip-b`">South</div>
+						<div class="one-third boxed p-ten text-center last tip-br cursor-pointer" data-tooltip="Class `tip-br`">South East</div>
+
+					<p><strong>Fade Examples</strong></p>
+						<div class="one-third boxed p-ten text-center tip-tl-fade cursor-pointer" data-tooltip="Class `tip-tl-fade`">North West</div>
+						<div class="one-third boxed p-ten text-center tip-t-fade cursor-pointer" data-tooltip="Class `tip-t-fade`">North</div>
+						<div class="one-third boxed p-ten text-center last tip-tr-fade cursor-pointer" data-tooltip="Class `tip-tr-fade`">North East</div>
+
+						<div class="one-third boxed p-ten text-center tip-l-fade cursor-pointer" data-tooltip="Class `tip-l-fade`">West</div>
+						<div class="one-third">&nbsp;</div>
+						<div class="one-third boxed p-ten text-center last tip-r-fade cursor-pointer" data-tooltip="Class `tip-r-fade`">East</div>
+
+						<div class="one-third boxed p-ten text-center tip-bl-fade cursor-pointer" data-tooltip="Class `tip-bl-fade`">South West</div>
+						<div class="one-third boxed p-ten text-center tip-b-fade cursor-pointer" data-tooltip="Class `tip-b-fade`">South</div>
+						<div class="one-third boxed p-ten text-center last tip-br-fade cursor-pointer" data-tooltip="Class `tip-br-fade`">South East</div>
+					
+					<p class="bm-larger">The animations also include zoom, bounce and spin effects, as well as various click and hover animations.</p>
+				</div>
+
+				<hr class="bm-larger" />
+
+
 			<h1>Animations</h1>
 				<div class="clearfix">
 					<div class="one-whole">
@@ -918,61 +966,61 @@
 							<p>To implement, please refer to the <a href="https://github.com/joemottershaw/animations/" target="_blank">Animations GitHub page</a> for documentation.</p>
 						</div>
 
-						<div class="progress-bar-container color-green-sea">
+						<div class="progress-bar-container color-green-sea tip-t-fade cursor-pointer" data-tooltip="100%">
 							<div class="progress-bar bar-100 color-turquoise" data-progress-bar-percent="100">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-nephritis">
+						<div class="progress-bar-container color-nephritis tip-t-fade cursor-pointer" data-tooltip="90%">
 							<div class="progress-bar bar-90 color-emerald" data-progress-bar-percent="90" data-progress-bar-delay="100">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-belize-hole">
+						<div class="progress-bar-container color-belize-hole tip-t-fade cursor-pointer" data-tooltip="80%">
 							<div class="progress-bar bar-80 color-peter-river" data-progress-bar-percent="80" data-progress-bar-delay="200">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-wisteria">
+						<div class="progress-bar-container color-wisteria tip-t-fade cursor-pointer" data-tooltip="70%">
 							<div class="progress-bar bar-70 color-amethyst" data-progress-bar-percent="70" data-progress-bar-delay="300">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-midnight-blue">
+						<div class="progress-bar-container color-midnight-blue tip-t-fade cursor-pointer" data-tooltip="60%">
 							<div class="progress-bar bar-60 color-wet-asphalt" data-progress-bar-percent="60" data-progress-bar-delay="400">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-orange">
+						<div class="progress-bar-container color-orange tip-t-fade cursor-pointer" data-tooltip="50%">
 							<div class="progress-bar bar-50 color-sun-flower" data-progress-bar-percent="50" data-progress-bar-delay="500">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-pumpkin">
+						<div class="progress-bar-container color-pumpkin tip-t-fade cursor-pointer" data-tooltip="40%">
 							<div class="progress-bar bar-40 color-carrot" data-progress-bar-percent="40" data-progress-bar-delay="600">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-pomegranate">
+						<div class="progress-bar-container color-pomegranate tip-t-fade cursor-pointer" data-tooltip="30%">
 							<div class="progress-bar bar-30 color-alizarin" data-progress-bar-percent="30" data-progress-bar-delay="700">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-silver">
+						<div class="progress-bar-container color-silver tip-t-fade cursor-pointer" data-tooltip="20%">
 							<div class="progress-bar bar-20 color-clouds" data-progress-bar-percent="20" data-progress-bar-delay="800">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
 						</div>
 
-						<div class="progress-bar-container color-asbestos">
+						<div class="progress-bar-container color-asbestos tip-t-fade cursor-pointer" data-tooltip="10%">
 							<div class="progress-bar bar-10 color-concrete" data-progress-bar-percent="10" data-progress-bar-delay="900">
 								<div class="progress-bar-candy candy-rtl"></div>
 							</div>
@@ -988,7 +1036,7 @@
 					<div class="one-whole">
 						<div class="indent-20">
 							<p>
-								This best way to really start understanding Backbone is to start using it, look through the 'backbone.less' and the 'index.html' files in the 'demo' directory to get a good understanding of how it all works and start creating a demo site to see how you find it!
+								This best way to really start understanding Backbone is to start using it, look through the 'backbone-*.less' and the 'index.html' files to get a good understanding of how it all works and start creating a demo site to see how you find it!
 							</p>
 						</div>
 					</div>
@@ -1012,6 +1060,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<script src="assets/js/smoothscroll.js" type="text/javascript"></script>
 		<script src="assets/js/placeholders.min.js" type="text/javascript"></script>
+		<script src="assets/js/tipsy.js" type="text/javascript"></script>
 		<script src="assets/js/animations.min.js" type="text/javascript"></script>
 		<script src="assets/js/responsive-tabs.min.js" type="text/javascript"></script>
 		<script src="assets/js/responsive-accordion.min.js" type="text/javascript"></script>

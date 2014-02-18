@@ -1,4 +1,4 @@
-//	Backbone v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.2, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
@@ -17,10 +17,6 @@
 
 	// Set all elements to the 'border box' model
 		*, *:before, *:after { .box-model(); }
-
-	// Content Box override for 'border box' model
-	// Assign `content-box-model` as an element class or use the `.box-model(content-box);` mixin
-		.content-box-model { .box-model(content-box); }
 
 	
 //	#Document
@@ -432,7 +428,38 @@
 		.inline-block	{ display: inline-block;                }
 
 	// Cursors
-		.pointer:hover	{ cursor: pointer; }
+		.cursor-auto			{ cursor: auto; }
+		.cursor-default			{ cursor: default; }
+		.cursor-none			{ cursor: none; }
+		.cursor-context-menu	{ cursor: context-menu; }
+		.cursor-help			{ cursor: help; }
+		.cursor-pointer			{ cursor: pointer; }
+		.cursor-progress		{ cursor: progress; }
+		.cursor-wait			{ cursor: wait; }
+		.cursor-cel				{ cursor: cell; }
+		.cursor-crosshair		{ cursor: crosshair; }
+		.cursor-text			{ cursor: text; }
+		.cursor-vertical-text	{ cursor: vertical-text; }
+		.cursor-alias			{ cursor: alias; }
+		.cursor-copy			{ cursor: copy; }
+		.cursor-move			{ cursor: move; }
+		.cursor-no-drop			{ cursor: no-drop; }
+		.cursor-not-allowed		{ cursor: not-allowed; }
+		.cursor-all-scroll		{ cursor: all-scroll; }
+		.cursor-col-resize		{ cursor: col-resize; }
+		.cursor-row-resize		{ cursor: row-resize; }
+		.cursor-n-resize		{ cursor: n-resize; }
+		.cursor-e-resize		{ cursor: e-resize; }
+		.cursor-s-resize		{ cursor: s-resize; }
+		.cursor-w-resize		{ cursor: w-resize; }
+		.cursor-ns-resize		{ cursor: ns-resize; }
+		.cursor-ew-resize		{ cursor: ew-resize; }
+		.cursor-ne-resize		{ cursor: ne-resize; }
+		.cursor-nw-resize		{ cursor: nw-resize; }
+		.cursor-se-resize		{ cursor: se-resize; }
+		.cursor-sw-resize		{ cursor: sw-resize; }
+		.cursor-nesw-resize		{ cursor: nesw-resize; }
+		.cursor-nwse-resize		{ cursor: nwse-resize; }
 
 
 //	#Typography
@@ -932,7 +959,6 @@
 
 	// Media Queries
 		@media @tablet-mobile {
-			input,
 			input[type="text"],
 			input[type="password"],
 			input[type="email"],

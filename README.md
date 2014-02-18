@@ -1,4 +1,4 @@
-Backbone v1.1
+Backbone v1.2
 =============
 
 A simple to use HTML, LESS/CSS and JavaScript/jQuery responsive framework (or foundation/boilerplate) to help with rapid protyping and development of websites for use on Desktop, Laptops, Tablets and Mobile devices.
@@ -10,7 +10,7 @@ Usage
 ======
 
 <ul>
-<li>Please refer to the demo page for documentation</li>
+  <li>Please refer to the demo page for documentation</li>
 </ul>
 
 
