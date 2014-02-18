@@ -9,22 +9,24 @@ A simple to use HTML, LESS/CSS and JavaScript/jQuery responsive framework (or fo
 Usage
 ======
 
-  <ul>
-    <li>Please refer to the demo page for documentation</li>
-  </ul>
+<ul>
+<li>Please refer to the demo page for documentation</li>
+</ul>
 
 
 Browser Compatibility
 =====================
 
-IE 8+<br />
-Firefox<br />
-Chrome<br />
-Safari<br />
-Opera<br />
-Most mobile browsers
+<ul>
+  <li>IE 8+</li>
+  <li>Firefox</li>
+  <li>Chrome</li>
+  <li>Safari</li>
+  <li>Opera</li>
+  <li>Most mobile browsers</li>
+</ul>
 
-Note that IE 8 will fail to load 'less.min.js', once all LESS files have been compiled and your workflow is in production mode it will work in IE 8.
+Note that IE 8 and older browsers will fail to load 'less.min.js'. Once all LESS files have been compiled to CSS and your workflow is in production mode it will work correctly.
 
 
 Author
