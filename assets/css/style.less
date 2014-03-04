@@ -1,9 +1,10 @@
-//	Backbone v1.2, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
 //	==================================================
 //		#Imports
+//		#Global
 //		#Header
 //		#Content
 //		#Footer
@@ -15,6 +16,32 @@
 	@import 'backbone-vars';
 	@import 'backbone-mixins';
 	@import 'backbone-frame';
+
+
+//	#Global
+//	==================================================
+
+	// Tipsy Tooltips
+		.tipsy {
+			font-family: @tipsy-font-family;
+			font-size: @tipsy-font-size;
+			line-height: normal;
+		}
+
+		.tipsy-inner {
+			padding: @tipsy-padding;
+			background-color: @tipsy-background-color;
+			color: @tipsy-font-color;
+		}
+
+		.tipsy-inner {
+			.border-radius(@tipsy-border-radius);
+		}
+
+		.tipsy-arrow-n { border-bottom-color: @tipsy-background-color; }
+		.tipsy-arrow-s { border-top-color: @tipsy-background-color; }
+		.tipsy-arrow-e { border-left-color: @tipsy-background-color; }
+		.tipsy-arrow-w { border-right-color: @tipsy-background-color; }
 
 
 //	#Header

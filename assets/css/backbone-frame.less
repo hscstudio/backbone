@@ -1,4 +1,4 @@
-//	Backbone v1.2, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
@@ -29,12 +29,12 @@
 			height: 100%;
 			margin: 0;
 			padding: 0;
-			background: @background-color;
-			color: @font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: .8em;
-			font-weight: normal;
-			line-height: 2em;
+			background: @body-background-color;
+			color: @body-font-color;
+			font-family: @body-font-family;
+			font-size: @body-font-size;
+			font-weight: @body-font-weight;
+			line-height: @body-line-height;
 			letter-spacing: 0;
 			overflow-x: hidden;
 			scrollbar-face-color: @ie-scrollbar-face-color;
@@ -150,6 +150,7 @@
 			.one-quarter,
 			.two-quarter,
 			.three-quarter {
+				min-width: 280px;
 				margin-right: 20px;
 				margin-bottom: 20px;
 				position: relative;
@@ -312,7 +313,6 @@
 		@media @tablet-mobile {
 			.container {
 				width: 100%;
-				min-width: 300px;
 				padding: 0 20px;
 
 				.one-half,
@@ -322,6 +322,7 @@
 				.two-quarter,
 				.three-quarter {
 				 	width: 100%;
+				 	min-width: 280px;
 					margin-right: 0;
 				}
 			}
@@ -334,6 +335,7 @@
 			.three-quarter-percent {
 				&.tablet {
 					width: 100%;
+				 	min-width: 280px;
 					padding-right: 0;
 
 					&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
@@ -348,12 +350,10 @@
 			.one-quarter-percent,
 			.two-quarter-percent,
 			.three-quarter-percent {
-				&.mobile {
-					width: 100%;
-					padding-right: 0;
+				width: 100%;
+				padding-right: 0;
 
-					&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
-				}
+				&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
 			}
 		}
 
@@ -559,38 +559,38 @@
 
 		h1 {
 			color: @h1-font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 2em;
+			font-family: @h1-font-family;
+			font-size: @h1-font-size;
 		}
 
 		h2 {
 			color: @h2-font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 1.8em;
+			font-family: @h2-font-family;
+			font-size: @h2-font-size;
 		}
 
 		h3 {
 			color: @h3-font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 1.6em;
+			font-family: @h3-font-family;
+			font-size: @h3-font-size;
 		}
 
 		h4 {
 			color: @h4-font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 1.4em;
+			font-family: @h4-font-family;
+			font-size: @h4-font-size;
 		}
 
 		h5 {
 			color: @h5-font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 1.2em;
+			font-family: @h5-font-family;
+			font-size: @h5-font-size;
 		}
 
 		h6 {
 			color: @h6-font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 1.1em;
+			font-family: @h6-font-family;
+			font-size: @h6-font-size;
 		}
 	
 	// Quotes
@@ -629,7 +629,7 @@
 				display: block;
 				margin-bottom: 15px;
 				font-size: 80%;
-				color: @font-color;
+				color: @body-font-color;
 
 				&:before { content: "\2014 \2009"; }
 			}
@@ -693,13 +693,29 @@
 			&.circle	{ list-style: circle outside; }
 			&.disc		{ list-style: disc outside;   }
 			&.square	{ list-style: square outside; }
+
+			li {
+				&.bm-remove		{ margin-bottom: 0;    }
+				&.bm-smaller	{ margin-bottom: 5px;  }
+				&.bm-small		{ margin-bottom: 10px; }
+				&.bm-medium		{ margin-bottom: 20px; }
+				&.bm-large		{ margin-bottom: 30px; }
+				&.bm-larger		{ margin-bottom: 40px; }
+
+				&.tm-remove		{ margin-top: 0;    }
+				&.tm-smaller	{ margin-top: 5px;  }
+				&.tm-small		{ margin-top: 10px; }
+				&.tm-medium		{ margin-top: 20px; }
+				&.tm-large		{ margin-top: 30px; }
+				&.tm-larger		{ margin-top: 40px; }
+			}
 		}
 
 	// Preformatted
 		code {
 			border: 1px solid #DDD;
 			.border-radius(3px);
-			padding: 2px;
+			padding: 2px 5px;
 			background: #FFFFFF;
 			color: #DD1144;
 			white-space: nowrap;
@@ -784,12 +800,12 @@
 			margin: 0 0 20px;
 			outline: none;
 			border: @input-border-size @input-border-style @input-border-color;
-			.border-radius(0);
+			.border-radius(@input-border-radius);
 			padding: 6px;
 			background: @input-background-color;
 			color: @input-font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 1em;
+			font-family: @input-font-family;
+			font-size: @input-font-size;
 			font-weight: normal;
 			font-variant: normal;
 			text-transform: none;
@@ -814,9 +830,9 @@
 			&.tm-large		{ margin-top: 30px; }
 			&.tm-larger		{ margin-top: 40px; }
 
-			&.h-small		{ height: 30px; font-size: .8em; }
-			&.h-medium		{ height: 40px; font-size: 1em;  }
-			&.h-large		{ height: 50px; font-size: 1em;  }
+			&.h-small		{ height: 30px; font-size: 80%;  }
+			&.h-medium		{ height: 40px; font-size: 100%; }
+			&.h-large		{ height: 50px; font-size: 120%; }
 		}
 
 		input.w-small,
@@ -892,10 +908,12 @@
 			margin: 0 0 20px;
 			outline: none;
 			border: @button-border-size @button-border-style @button-border-color;
+			.border-radius(@button-border-radius);
+			padding: 0 10px;
 			background: @button-background-color;
 			color: @button-font-color;
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 1em;
+			font-family: @button-font-family;
+			font-size: @button-font-size;
 			font-weight: normal;
 			text-align: center;
 			text-transform: none;
@@ -923,9 +941,9 @@
 			&.w-large		{ min-width: 150px; }
 			&.w-full		{ width: 100%;      }
 
-			&.h-small		{ height: 30px; font-size: .8em; }
-			&.h-medium		{ height: 40px; font-size: 1em;  }
-			&.h-large		{ height: 50px; font-size: 1em;  }
+			&.h-small		{ height: 30px; font-size: 80%;  }
+			&.h-medium		{ height: 40px; font-size: 100%; }
+			&.h-large		{ height: 50px; font-size: 120%; }
 
 			&:hover {
 				border-color: @button-border-color-hover;
