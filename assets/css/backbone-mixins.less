@@ -175,7 +175,15 @@
 		}
 
 	// Scale
-		.scale(@scale: 1, @x: 0, @y: 0) {
+		.scale(@scale: 1) {
+			-webkit-transform: scale(@scale);
+			-moz-transform: scale(@scale);
+			-o-transform: scale(@scale);
+			-ms-transform: scale(@scale);
+			transform: scale(@scale);
+		}
+			
+		.scale-origin(@scale: 1, @x: 0, @y: 0) {
 			-webkit-transform: scale(@scale);
 			-webkit-transform-origin: @x @y;
 			-moz-transform: scale(@scale);

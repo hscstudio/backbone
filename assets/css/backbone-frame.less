@@ -115,6 +115,7 @@
 		.container {
 			display: block;
 			width: 940px;
+			min-width: 280px;
 			margin: 0 auto 20px auto;
 			padding: 0;
 			position: relative;
@@ -150,7 +151,6 @@
 			.one-quarter,
 			.two-quarter,
 			.three-quarter {
-				min-width: 280px;
 				margin-right: 20px;
 				margin-bottom: 20px;
 				position: relative;
@@ -173,6 +173,7 @@
 
 				&.boxed {
 					border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color;
+					.border-radius(@grid-boxed-border-radius);
 					padding: 20px;
 					background: @grid-boxed-background;
 
@@ -239,6 +240,9 @@
 			&.tm-medium		{ margin-top: 20px; }
 			&.tm-large		{ margin-top: 30px; }
 			&.tm-larger		{ margin-top: 40px; }
+
+			&.alpha { padding-left: 10px;  }
+			&.omega { padding-right: 10px; }
 
 			&.boxed {
 				border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color;
@@ -322,7 +326,6 @@
 				.two-quarter,
 				.three-quarter {
 				 	width: 100%;
-				 	min-width: 280px;
 					margin-right: 0;
 				}
 			}
@@ -335,8 +338,9 @@
 			.three-quarter-percent {
 				&.tablet {
 					width: 100%;
-				 	min-width: 280px;
-					padding-right: 0;
+
+					&.alpha { padding-left: 0;  }
+					&.omega { padding-right: 0; }
 
 					&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
 				}
@@ -351,7 +355,9 @@
 			.two-quarter-percent,
 			.three-quarter-percent {
 				width: 100%;
-				padding-right: 0;
+
+				&.alpha { padding-left: 0;  }
+				&.omega { padding-right: 0; }
 
 				&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
 			}
