@@ -1,4 +1,4 @@
-Backbone v1.3
+Backbone v1.4
 =============
 
 A simple to use HTML, LESS/CSS and JavaScript/jQuery responsive framework (or foundation/boilerplate) to help with rapid protyping and development of websites for use on Desktop, Laptops, Tablets and Mobile devices.
@@ -26,7 +26,7 @@ Browser Compatibility
   <li>Most mobile browsers</li>
 </ul>
 
-Note that IE 8 and older browsers will fail to load 'less.min.js'. Once all LESS files have been compiled to CSS and your workflow is in production mode it will work correctly.
+Note that IE 8 and older browsers will fail to load 'less.js' in this demo. Once your project is completed, compile all LESS files to CSS and set your project to production, only using LESS for development purposes.
 
 
 Author
@@ -34,3 +34,16 @@ Author
 
 Joe Mottershaw, Cloud Eight<br />
 http://www.cloud-eight.com
+
+
+Credits
+=======
+
+smoothscroll.js, Balázs Galambosi<br />
+https://gist.github.com/galambalazs/6477177
+
+placeholders.js, James Allardice<br />
+https://github.com/jamesallardice/Placeholders.js
+
+tipsy.js, Jason Frame<br />
+https://github.com/jaz303/tipsy

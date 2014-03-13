@@ -1,4 +1,4 @@
-//	Backbone v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.4, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
@@ -48,7 +48,12 @@
 
 	// JavaScript Disabled
 		#no-script {
-			border: @no-script-border-size @no-script-border-style @no-script-border-color;
+			border: 1px @no-script-border-style @no-script-border-color;
+			border-top-width: @no-script-border-top-size;
+			border-right-width: @no-script-border-right-size;
+			border-bottom-width: @no-script-border-bottom-size;
+			border-left-width: @no-script-border-left-size;
+			.border-radius-each(@no-script-border-top-left-radius, @no-script-border-top-right-radius, @no-script-border-bottom-right-radius, @no-script-border-bottom-left-radius);
 			padding: 20px;
 			background: @no-script-background-color;
 			color: @no-script-font-color;
@@ -172,8 +177,12 @@
 				&.tm-larger		{ margin-top: 40px; }
 
 				&.boxed {
-					border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color;
-					.border-radius(@grid-boxed-border-radius);
+					border: 1px @grid-boxed-border-style @grid-boxed-border-color;
+					border-top-width: @grid-boxed-border-top-size;
+					border-right-width: @grid-boxed-border-right-size;
+					border-bottom-width: @grid-boxed-border-bottom-size;
+					border-left-width: @grid-boxed-border-left-size;
+					.border-radius-each(@grid-boxed-border-top-left-radius, @grid-boxed-border-top-right-radius, @grid-boxed-border-bottom-right-radius, @grid-boxed-border-bottom-left-radius);
 					padding: 20px;
 					background: @grid-boxed-background;
 
@@ -245,7 +254,12 @@
 			&.omega { padding-right: 10px; }
 
 			&.boxed {
-				border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color;
+				border: 1px @grid-boxed-border-style @grid-boxed-border-color;
+				border-top-width: @grid-boxed-border-top-size;
+				border-right-width: @grid-boxed-border-right-size;
+				border-bottom-width: @grid-boxed-border-bottom-size;
+				border-left-width: @grid-boxed-border-left-size;
+				.border-radius-each(@grid-boxed-border-top-left-radius, @grid-boxed-border-top-right-radius, @grid-boxed-border-bottom-right-radius, @grid-boxed-border-bottom-left-radius);
 				border-right: 0;
 				padding: 20px;
 				background: @grid-boxed-background;
@@ -283,7 +297,13 @@
 				content: " ";
 			}
 
-			&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
+			&.boxed {
+				border: 1px @grid-boxed-border-style @grid-boxed-border-color;
+				border-top-width: @grid-boxed-border-top-size;
+				border-right-width: @grid-boxed-border-right-size;
+				border-bottom-width: @grid-boxed-border-bottom-size;
+				border-left-width: @grid-boxed-border-left-size;
+			}
 		}
 
 
@@ -312,6 +332,28 @@
 				.two-quarter	{ width: 364px; }
 				.three-quarter	{ width: 556px; }
 			}
+
+			.one-half-percent,
+			.one-third-percent,
+			.two-third-percent,
+			.one-quarter-percent,
+			.two-quarter-percent,
+			.three-quarter-percent {
+				&.desktop-tablet {
+					width: 100%;
+					
+					&.alpha { padding-left: 0;  }
+					&.omega { padding-right: 0; }
+
+					&.boxed {
+						border: 1px @grid-boxed-border-style @grid-boxed-border-color;
+						border-top-width: @grid-boxed-border-top-size;
+						border-right-width: @grid-boxed-border-right-size;
+						border-bottom-width: @grid-boxed-border-bottom-size;
+						border-left-width: @grid-boxed-border-left-size;
+					}
+				}
+			}
 		}
 
 		@media @tablet-mobile {
@@ -336,13 +378,19 @@
 			.one-quarter-percent,
 			.two-quarter-percent,
 			.three-quarter-percent {
-				&.tablet {
+				&.tablet-mobile {
 					width: 100%;
-
+					
 					&.alpha { padding-left: 0;  }
 					&.omega { padding-right: 0; }
 
-					&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
+					&.boxed {
+						border: 1px @grid-boxed-border-style @grid-boxed-border-color;
+						border-top-width: @grid-boxed-border-top-size;
+						border-right-width: @grid-boxed-border-right-size;
+						border-bottom-width: @grid-boxed-border-bottom-size;
+						border-left-width: @grid-boxed-border-left-size;
+					}
 				}
 			}
 		}
@@ -355,11 +403,17 @@
 			.two-quarter-percent,
 			.three-quarter-percent {
 				width: 100%;
-
+					
 				&.alpha { padding-left: 0;  }
 				&.omega { padding-right: 0; }
 
-				&.boxed { border: @grid-boxed-border-size @grid-boxed-border-style @grid-boxed-border-color; }
+				&.boxed {
+					border: 1px @grid-boxed-border-style @grid-boxed-border-color;
+					border-top-width: @grid-boxed-border-top-size;
+					border-right-width: @grid-boxed-border-right-size;
+					border-bottom-width: @grid-boxed-border-bottom-size;
+					border-left-width: @grid-boxed-border-left-size;
+				}
 			}
 		}
 
@@ -567,36 +621,60 @@
 			color: @h1-font-color;
 			font-family: @h1-font-family;
 			font-size: @h1-font-size;
+			font-weight: @h1-font-weight;
+			font-variant: @h1-font-variant;
+			text-transform: @h1-text-transform;
+			letter-spacing: @h1-letter-spacing;
 		}
 
 		h2 {
 			color: @h2-font-color;
 			font-family: @h2-font-family;
 			font-size: @h2-font-size;
+			font-weight: @h2-font-weight;
+			font-variant: @h2-font-variant;
+			text-transform: @h2-text-transform;
+			letter-spacing: @h2-letter-spacing;
 		}
 
 		h3 {
 			color: @h3-font-color;
 			font-family: @h3-font-family;
 			font-size: @h3-font-size;
+			font-weight: @h3-font-weight;
+			font-variant: @h3-font-variant;
+			text-transform: @h3-text-transform;
+			letter-spacing: @h3-letter-spacing;
 		}
 
 		h4 {
 			color: @h4-font-color;
 			font-family: @h4-font-family;
 			font-size: @h4-font-size;
+			font-weight: @h4-font-weight;
+			font-variant: @h4-font-variant;
+			text-transform: @h4-text-transform;
+			letter-spacing: @h4-letter-spacing;
 		}
 
 		h5 {
 			color: @h5-font-color;
 			font-family: @h5-font-family;
 			font-size: @h5-font-size;
+			font-weight: @h5-font-weight;
+			font-variant: @h5-font-variant;
+			text-transform: @h5-text-transform;
+			letter-spacing: @h5-letter-spacing;
 		}
 
 		h6 {
 			color: @h6-font-color;
 			font-family: @h6-font-family;
 			font-size: @h6-font-size;
+			font-weight: @h6-font-weight;
+			font-variant: @h6-font-variant;
+			text-transform: @h6-text-transform;
+			letter-spacing: @h6-letter-spacing;
 		}
 	
 	// Quotes
@@ -805,17 +883,21 @@
 			.dimensions(300px, 40px);
 			margin: 0 0 20px;
 			outline: none;
-			border: @input-border-size @input-border-style @input-border-color;
-			.border-radius(@input-border-radius);
+			border: 1px @input-border-style @input-border-color;
+			border-top-width: @input-border-top-size;
+			border-right-width: @input-border-right-size;
+			border-bottom-width: @input-border-bottom-size;
+			border-left-width: @input-border-left-size;
+			.border-radius-each(@input-border-top-left-radius, @input-border-top-right-radius, @input-border-bottom-right-radius, @input-border-bottom-left-radius);
 			padding: 6px;
 			background: @input-background-color;
 			color: @input-font-color;
 			font-family: @input-font-family;
 			font-size: @input-font-size;
-			font-weight: normal;
-			font-variant: normal;
-			text-transform: none;
-			letter-spacing: 0;
+			font-weight: @input-font-weight;
+			font-variant: @input-font-variant;
+			text-transform: @input-text-transform;
+			letter-spacing: @input-letter-spacing;
 			line-height: normal;
 			.transition();
 
@@ -869,7 +951,7 @@
 		select[multiple]	{ height: auto !important; }
 
 		textarea {
-			min-height: 120px;
+			height: 120px;
 			font-variant: normal !important;
 			text-transform: none !important;
 
@@ -913,17 +995,21 @@
 			height: 40px;
 			margin: 0 0 20px;
 			outline: none;
-			border: @button-border-size @button-border-style @button-border-color;
-			.border-radius(@button-border-radius);
+			border: 1px @button-border-style @button-border-color;
+			border-top-width: @button-border-top-size;
+			border-right-width: @button-border-right-size;
+			border-bottom-width: @button-border-bottom-size;
+			border-left-width: @button-border-left-size;
+			.border-radius-each(@button-border-top-left-radius, @button-border-top-right-radius, @button-border-bottom-right-radius, @button-border-bottom-left-radius);
 			padding: 0 10px;
 			background: @button-background-color;
 			color: @button-font-color;
 			font-family: @button-font-family;
 			font-size: @button-font-size;
-			font-weight: normal;
-			text-align: center;
-			text-transform: none;
-			text-shadow: none;
+			font-weight: @button-font-weight;
+			font-variant: @button-font-variant;
+			text-transform: @button-text-transform;
+			letter-spacing: @button-letter-spacing;
 			letter-spacing: 0;
 			line-height: normal;
 			.transition();

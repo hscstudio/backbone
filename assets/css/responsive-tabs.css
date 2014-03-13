@@ -1,5 +1,5 @@
-/*	Responsive Tabs v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
-//	======================================================================================= */
+/*	Responsive Tabs v1.2.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	========================================================================================= */
 
 /*	Table of Contents
 //	==================================================
@@ -18,12 +18,20 @@
 			position: relative;
 		}
 
-		.tabs.bm-remove		{ margin-bottom: 0;    }
-		.tabs.bm-smaller	{ margin-bottom: 5px;  }
-		.tabs.bm-small		{ margin-bottom: 10px; }
-		.tabs.bm-medium		{ margin-bottom: 20px; }
-		.tabs.bm-large		{ margin-bottom: 30px; }
-		.tabs.bm-large		{ margin-bottom: 40px; }
+		/* For use in conjunction with the Backbone Responsive Framework - https://github.com/joemottershaw/backbone */
+			.tabs.bm-remove		{ margin-bottom: 0;    }
+			.tabs.bm-smaller	{ margin-bottom: 5px;  }
+			.tabs.bm-small		{ margin-bottom: 10px; }
+			.tabs.bm-medium		{ margin-bottom: 20px; }
+			.tabs.bm-large		{ margin-bottom: 30px; }
+			.tabs.bm-larger		{ margin-bottom: 40px; }
+
+			.tabs.tm-remove		{ margin-top: 0;    }
+			.tabs.tm-smaller	{ margin-top: 5px;  }
+			.tabs.tm-small		{ margin-top: 10px; }
+			.tabs.tm-medium		{ margin-top: 20px; }
+			.tabs.tm-large		{ margin-top: 30px; }
+			.tabs.tm-larger		{ margin-top: 40px; }
 
 		.tabs li {
 			width: 125px;

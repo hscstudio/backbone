@@ -1,9 +1,10 @@
-//	Backbone v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.4, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
 //	==================================================
 //		#Variables
+//		#Custom Variables
 
 
 //	#Variables
@@ -50,10 +51,16 @@
 		@ie-scrollbar-dark-shadow-color: darken(@ie-scrollbar-face-color, 15%);
 
 	// Grid
-		@grid-boxed-border-size: 1px;
+		@grid-boxed-border-top-size: 1px;
+		@grid-boxed-border-right-size: 1px;
+		@grid-boxed-border-bottom-size: 1px;
+		@grid-boxed-border-left-size: 1px;
 		@grid-boxed-border-style: solid;
 		@grid-boxed-border-color: #DDDDDD;
-		@grid-boxed-border-radius: 3px;
+		@grid-boxed-border-top-left-radius: 3px;
+		@grid-boxed-border-top-right-radius: 3px;
+		@grid-boxed-border-bottom-right-radius: 3px;
+		@grid-boxed-border-bottom-left-radius: 3px;
 		@grid-boxed-background: #FFFFFF;
 
 	// Typography
@@ -82,6 +89,34 @@
 		@h5-font-size: 1.2em;
 		@h6-font-size: 1.1em;
 
+		@h1-font-weight: normal;
+		@h2-font-weight: normal;
+		@h3-font-weight: normal;
+		@h4-font-weight: normal;
+		@h5-font-weight: normal;
+		@h6-font-weight: normal;
+
+		@h1-font-variant: normal;
+		@h2-font-variant: normal;
+		@h3-font-variant: normal;
+		@h4-font-variant: normal;
+		@h5-font-variant: normal;
+		@h6-font-variant: normal;
+
+		@h1-text-transform: none;
+		@h2-text-transform: none;
+		@h3-text-transform: none;
+		@h4-text-transform: none;
+		@h5-text-transform: none;
+		@h6-text-transform: none;
+
+		@h1-letter-spacing: 0em;
+		@h2-letter-spacing: 0em;
+		@h3-letter-spacing: 0em;
+		@h4-letter-spacing: 0em;
+		@h5-letter-spacing: 0em;
+		@h6-letter-spacing: 0em;
+
 		@blockquote-border-size: 5px;
 		@blockquote-border-style: solid;
 		@blockquote-border-color: #E2E2E2;
@@ -90,36 +125,63 @@
 		@blockquote-font-color: #7B7B7B;
 
 	// Forms
-		@input-border-size: 1px;
+		@input-border-top-size: 1px;
+		@input-border-right-size: 1px;
+		@input-border-bottom-size: 1px;
+		@input-border-left-size: 1px;
 		@input-border-style: solid;
 		@input-border-color: #E2E2E2;
 		@input-border-color-hover: darken(#E2E2E2, 5%);
 		@input-border-color-focus: darken(#E2E2E2, 10%);
-		@input-border-radius: 0px;
+		@input-border-top-left-radius: 0px;
+		@input-border-top-right-radius: 0px;
+		@input-border-bottom-right-radius: 0px;
+		@input-border-bottom-left-radius: 0px;
 		@input-background-color: #FFFFFF;
 		@input-font-color: #6B6B6B;
 		@input-font-family: Verdana, Geneva, sans-serif;
 		@input-font-size: .9em;
+		@input-font-weight: normal;
+		@input-font-variant: normal;
+		@input-text-transform: none;
+		@input-letter-spacing: 0em;
 
-		@button-border-size: 1px;
+		@button-border-top-size: 0px;
+		@button-border-right-size: 0px;
+		@button-border-bottom-size: 3px;
+		@button-border-left-size: 0px;
 		@button-border-style: solid;
 		@button-border-color: darken(@primary-color, 5%);
-		@button-border-color-hover: darken(@primary-color, 3%);
-		@button-border-color-click: darken(@primary-color, 8%);
-		@button-border-radius: 3px;
+		@button-border-color-hover: lighten(@button-border-color, 5%);
+		@button-border-color-click: darken(@button-border-color-hover, 5%);
+		@button-border-top-left-radius: 3px;
+		@button-border-top-right-radius: 3px;
+		@button-border-bottom-right-radius: 3px;
+		@button-border-bottom-left-radius: 3px;
 		@button-background-color: @primary-color;
-		@button-background-color-hover: lighten(@primary-color, 4%);
-		@button-background-color-click: lighten(@primary-color, 2%);
+		@button-background-color-hover: lighten(@button-background-color, 5%);
+		@button-background-color-click: darken(@button-background-color-hover, 5%);
 		@button-font-color: #FFFFFF;
 		@button-font-color-hover: #FFFFFF;
-		@button-font-color-click: #EEEEEE;
+		@button-font-color-click: #FFFFFF;
 		@button-font-family: Verdana, Geneva, sans-serif;
 		@button-font-size: 1.2em;
+		@button-font-weight: normal;
+		@button-font-variant: normal;
+		@button-text-transform: none;
+		@button-letter-spacing: 0em;
 
 	// JavaScript Disabled
-		@no-script-border-size: 1px;
+		@no-script-border-top-size: 1px;
+		@no-script-border-right-size: 1px;
+		@no-script-border-bottom-size: 1px;
+		@no-script-border-left-size: 1px;
 		@no-script-border-style: solid;
 		@no-script-border-color: darken(#FFF6BF, 13%);
+		@no-script-border-top-left-radius: 3px;
+		@no-script-border-top-right-radius: 3px;
+		@no-script-border-bottom-right-radius: 3px;
+		@no-script-border-bottom-left-radius: 3px;
 		@no-script-background-color: #FFF6BF;
 		@no-script-font-color: #7B7B7B;
 		@no-script-link-color: @primary-color;
@@ -132,3 +194,9 @@
 		@tipsy-font-color: #FFFFFF;
 		@tipsy-font-family: Verdana, Geneva, sans-serif;
 		@tipsy-font-size: .8em;
+
+
+//	#Custom Variables
+//	==================================================
+
+	
