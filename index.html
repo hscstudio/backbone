@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Backbone v1.4.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/ -->
+<!-- Backbone v1.5, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/ -->
 
 <!--[if lt IE 7 ]><html class="no-js ie ie6" lang="en"><![endif]-->
 <!--[if IE 7 ]><html class="no-js ie ie7" lang="en"><![endif]-->
@@ -51,10 +51,12 @@
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/normalize.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/tipsy.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="assets/css/edge-alerts.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/animations.min.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/responsive-tabs.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/responsive-accordion.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/responsive-toggle.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="assets/css/pop-growl.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/style.less" rel="stylesheet/less" type="text/css" media="all" />
 
 		<script type="text/javascript">less = { env: "development" };</script>
@@ -85,7 +87,7 @@
 	<!-- Header -->
 		<div class="container">
 			<div class="one-whole bm-remove">
-				<h1 class="bm-larger tm-larger text-center"><a href="https://github.com/hellojd/backbone" target="_blank">Backbone: A Responsive Framework v1.4.1</a></h1>
+				<h1 class="bm-larger tm-larger text-center"><a href="https://github.com/hellojd/backbone" target="_blank">Backbone: A Responsive Framework v1.5</a></h1>
 			</div>
 
 			<hr class="bm-larger" />
@@ -118,9 +120,11 @@
 								<a href="https://gist.github.com/galambalazs/6477177" target="_blank">'smoothscroll.js'</a>,
 								<a href="http://jamesallardice.github.io/Placeholders.js/" target="_blank">'placeholders.js'</a>,
 								<a href="http://onehackoranother.com/projects/jquery/tipsy/" target="_blank">'tipsy'</a>,
+								<a href="https://github.com/joemottershaw/edge-alerts" target="_blank">'Edge Alerts'</a>,
 								<a href="https://github.com/joemottershaw/responsive-tabs" target="_blank">'Responsive Tabs'</a>,
 								<a href="https://github.com/joemottershaw/responsive-accordion" target="_blank">'Responsive Accordion'</a>,
-								<a href="https://github.com/joemottershaw/responsive-toggle" target="_blank">'Responsive Toggle'</a> and
+								<a href="https://github.com/joemottershaw/responsive-toggle" target="_blank">'Responsive Toggle'</a>,
+								<a href="https://github.com/joemottershaw/pop-growl" target="_blank">'popGrowl'</a> notifications and
 								<a href="https://github.com/joemottershaw/animations" target="_blank">'Animations'</a>.
 								Of course any of these files and plugins can be removed by simplying unlinking them to remove any unwanted bloat/load time.
 								It also includes the Facebook API, Facebook Opengraph and Twitter Card HTML snippets, links to fav icons and apple icons in the 'assets/imgs' directory. As well as the conditional statement classes on the 'html' element.
@@ -599,6 +603,21 @@
 				<hr class="bm-larger" />
 
 
+			<h1>Edge Alerts</h1>
+				<div class="clearfix">
+					<div class="one-whole">
+						<div class="indent-20">
+							<p class="bm-remove">To implement, please refer to the <a href="https://github.com/joemottershaw/edge-alerts/" target="_blank">Edge Alerts GitHub page</a> for documentation.</p>
+						</div>
+					</div>
+
+					<div class="one-half boxed text-center"><button id="alert" class="bm-remove">Alert</button></div>
+					<div class="one-half boxed text-center last"><button id="confirm" class="bm-remove">Confirm</button></div>
+				</div>
+
+				<hr class="bm-larger" />
+
+
 			<h1>Animations</h1>
 				<div class="clearfix">
 					<div class="one-whole">
@@ -614,6 +633,92 @@
 						<div class="one-quarter boxed text-center animate last" data-anim-type="fadeInRight" data-anim-delay="600">fadeInRight</div>
 					
 					<p class="bm-larger">The animations also include zoom, bounce and spin effects, as well as various click and hover animations.</p>
+				</div>
+
+				<hr class="bm-larger" />
+
+
+			<h1>popGrowl Notifications</h1>
+				<div class="clearfix">
+					<div class="one-whole">
+						<div class="indent-20">
+							<p class="bm-remove">To implement, please refer to the <a href="https://github.com/joemottershaw/pop-growl/" target="_blank">popGrowl GitHub page</a> for documentation.</p>
+						</div>
+					</div>
+
+					<div class="one-half text-center">
+						<h4>Top Left Notification (Timer)</h4>
+
+						<button id="top-left-default" class="w-small h-small">Default</button>
+						<button id="top-left-success" class="w-small h-small">Success</button>
+						<button id="top-left-warning" class="w-small h-small">Warning</button>
+						<button id="top-left-error" class="w-small h-small">Error</button>
+					</div>
+
+					<div class="one-half text-center last">
+						<h4>Top Right Notification (Timer)</h4>
+
+						<button id="top-right-default" class="w-small h-small">Default</button>
+						<button id="top-right-success" class="w-small h-small">Success</button>
+						<button id="top-right-warning" class="w-small h-small">Warning</button>
+						<button id="top-right-error" class="w-small h-small">Error</button>
+					</div>
+
+					<div class="one-half text-center">
+						<h4>Bottom Left Notification (Timer)</h4>
+
+						<button id="bottom-left-default" class="w-small h-small">Default</button>
+						<button id="bottom-left-success" class="w-small h-small">Success</button>
+						<button id="bottom-left-warning" class="w-small h-small">Warning</button>
+						<button id="bottom-left-error" class="w-small h-small">Error</button>
+					</div>
+
+					<div class="one-half text-center last">
+						<h4>Bottom Right Notification (Timer)</h4>
+
+						<button id="bottom-right-default" class="w-small h-small">Default</button>
+						<button id="bottom-right-success" class="w-small h-small">Success</button>
+						<button id="bottom-right-warning" class="w-small h-small">Warning</button>
+						<button id="bottom-right-error" class="w-small h-small">Error</button>
+					</div>
+
+					<hr class="bm-larger" />
+
+					<div class="one-half text-center">
+						<h4>Top Left Notification (Sticky)</h4>
+
+						<button id="top-left-default-sticky" class="w-small h-small">Default</button>
+						<button id="top-left-success-sticky" class="w-small h-small">Success</button>
+						<button id="top-left-warning-sticky" class="w-small h-small">Warning</button>
+						<button id="top-left-error-sticky" class="w-small h-small">Error</button>
+					</div>
+
+					<div class="one-half text-center last">
+						<h4>Top Right Notification (Sticky)</h4>
+
+						<button id="top-right-default-sticky" class="w-small h-small">Default</button>
+						<button id="top-right-success-sticky" class="w-small h-small">Success</button>
+						<button id="top-right-warning-sticky" class="w-small h-small">Warning</button>
+						<button id="top-right-error-sticky" class="w-small h-small">Error</button>
+					</div>
+
+					<div class="one-half text-center">
+						<h4>Bottom Left Notification (Sticky)</h4>
+
+						<button id="bottom-left-default-sticky" class="w-small h-small">Default</button>
+						<button id="bottom-left-success-sticky" class="w-small h-small">Success</button>
+						<button id="bottom-left-warning-sticky" class="w-small h-small">Warning</button>
+						<button id="bottom-left-error-sticky" class="w-small h-small">Error</button>
+					</div>
+
+					<div class="one-half text-center last">
+						<h4>Bottom Right Notification (Sticky)</h4>
+
+						<button id="bottom-right-default-sticky" class="w-small h-small">Default</button>
+						<button id="bottom-right-success-sticky" class="w-small h-small">Success</button>
+						<button id="bottom-right-warning-sticky" class="w-small h-small">Warning</button>
+						<button id="bottom-right-error-sticky" class="w-small h-small">Error</button>
+					</div>
 				</div>
 
 				<hr class="bm-larger" />
@@ -1073,11 +1178,403 @@
 		<script src="assets/js/smoothscroll.js" type="text/javascript"></script>
 		<script src="assets/js/placeholders.min.js" type="text/javascript"></script>
 		<script src="assets/js/tipsy.js" type="text/javascript"></script>
+		<script src="assets/js/edge-alerts.min.js" type="text/javascript"></script>
 		<script src="assets/js/animations.min.js" type="text/javascript"></script>
 		<script src="assets/js/responsive-tabs.min.js" type="text/javascript"></script>
 		<script src="assets/js/responsive-accordion.min.js" type="text/javascript"></script>
 		<script src="assets/js/responsive-toggle.min.js" type="text/javascript"></script>
+		<script src="assets/js/pop-growl.min.js" type="text/javascript"></script>
 		<script src="assets/js/backbone.js" type="text/javascript"></script>
+
+		<script>
+			// Dialogs
+				$('#alert').click(function() {
+					$('body').edgeAlerts({
+						title: 'Alert!',
+						message: 'This is an alert...'
+					});
+				});
+
+				$('#confirm').click(function() {
+					$('body').edgeAlerts({
+						type: 'confirm',
+						title: 'Confirm!',
+						message: 'Do you want to go to the Backbone GitHub page?',
+						callbackConfirm: function() { window.location = 'https://github.com/joemottershaw/backbone'; }
+					});
+				});
+
+
+			// Timed Notifications
+				// Top Left
+					// Top Left Default (Timed)
+						$('#top-left-default').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-left-container',
+								hPosition: 'left',
+								title: 'Default',
+								text: 'This is a default notification...'
+							});
+						});
+
+					// Top Left Success (Timed)
+						$('#top-left-success').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-left-container',
+								hPosition: 'left',
+								type: 'success',
+								title: 'Success',
+								text: 'This is a successful notification...'
+							});
+						});
+
+					// Top Left Warning (Timed)
+						$('#top-left-warning').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-left-container',
+								hPosition: 'left',
+								type: 'warning',
+								title: 'Warning',
+								text: 'This is a warning notification...'
+							});
+						});
+
+					// Top Left Error (Timed)
+						$('#top-left-error').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-left-container',
+								hPosition: 'left',
+								type: 'error',
+								title: 'Error',
+								text: 'This is an error notification...'
+							});
+						});
+
+				// Top Right
+					// Top Right Default (Timed)
+						$('#top-right-default').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-right-container',
+								title: 'Default',
+								text: 'This is a default notification...'
+							});
+						});
+
+					// Top Right Success (Timed)
+						$('#top-right-success').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-right-container',
+								type: 'success',
+								title: 'Success',
+								text: 'This is a successful notification...'
+							});
+						});
+
+					// Top Right Warning (Timed)
+						$('#top-right-warning').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-right-container',
+								type: 'warning',
+								title: 'Warning',
+								text: 'This is a warning notification...'
+							});
+						});
+
+					// Top Right Error (Timed)
+						$('#top-right-error').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-right-container',
+								type: 'error',
+								title: 'Error',
+								text: 'This is an error notification...'
+							});
+						});
+
+				// Bottom Right
+					// Bottom Right Default (Timed)
+						$('#bottom-right-default').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-right-container',
+								vPosition: 'bottom',
+								title: 'Default',
+								text: 'This is a default notification...'
+							});
+						});
+
+					// Bottom Right Success (Timed)
+						$('#bottom-right-success').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-right-container',
+								vPosition: 'bottom',
+								type: 'success',
+								title: 'Success',
+								text: 'This is a successful notification...'
+							});
+						});
+
+					// Bottom Right Warning (Timed)
+						$('#bottom-right-warning').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-right-container',
+								vPosition: 'bottom',
+								type: 'warning',
+								title: 'Warning',
+								text: 'This is a warning notification...'
+							});
+						});
+
+					// Bottom Right Error (Timed)
+						$('#bottom-right-error').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-right-container',
+								vPosition: 'bottom',
+								type: 'error',
+								title: 'Error',
+								text: 'This is an error notification...'
+							});
+						});
+
+				// Bottom Left
+					// Bottom Left Default (Timed)
+						$('#bottom-left-default').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-left-container',
+								vPosition: 'bottom',
+								hPosition: 'left',
+								title: 'Default',
+								text: 'This is a default notification...'
+							});
+						});
+
+					// Bottom Left Success (Timed)
+						$('#bottom-left-success').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-left-container',
+								vPosition: 'bottom',
+								hPosition: 'left',
+								type: 'success',
+								title: 'Success',
+								text: 'This is a successful notification...'
+							});
+						});
+
+					// Bottom Left Warning (Timed)
+						$('#bottom-left-warning').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-left-container',
+								vPosition: 'bottom',
+								hPosition: 'left',
+								type: 'warning',
+								title: 'Warning',
+								text: 'This is a warning notification...'
+							});
+						});
+
+					// Bottom Left Error (Timed)
+						$('#bottom-left-error').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-left-container',
+								vPosition: 'bottom',
+								hPosition: 'left',
+								type: 'error',
+								title: 'Error',
+								text: 'This is an error notification...'
+							});
+						});
+
+			// Sticky Notifications
+				// Top Left
+					// Top Left Default (Sticky)
+						$('#top-left-default-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-left-container',
+								hPosition: 'left',
+								title: 'Default',
+								text: 'This is a sticky default notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Top Left Success (Sticky)
+						$('#top-left-success-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-left-container',
+								hPosition: 'left',
+								type: 'success',
+								title: 'Success',
+								text: 'This is a sticky successful notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Top Left Warning (Sticky)
+						$('#top-left-warning-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-left-container',
+								hPosition: 'left',
+								type: 'warning',
+								title: 'Warning',
+								text: 'This is a sticky warning notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Top Left Error (Sticky)
+						$('#top-left-error-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-left-container',
+								hPosition: 'left',
+								type: 'error',
+								title: 'Error',
+								text: 'This is a sticky error notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+				// Top Right
+					// Top Right Default (Sticky)
+						$('#top-right-default-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-right-container',
+								title: 'Default',
+								text: 'This is a sticky default notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Top Right Success (Sticky)
+						$('#top-right-success-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-right-container',
+								type: 'success',
+								title: 'Success',
+								text: 'This is a sticky successful notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Top Right Warning (Sticky)
+						$('#top-right-warning-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-right-container',
+								type: 'warning',
+								title: 'Warning',
+								text: 'This is a sticky warning notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Top Right Error (Sticky)
+						$('#top-right-error-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-top-right-container',
+								type: 'error',
+								title: 'Error',
+								text: 'This is a sticky error notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+				// Bottom Right
+					// Bottom Right Default (Sticky)
+						$('#bottom-right-default-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-right-container',
+								vPosition: 'bottom',
+								title: 'Default',
+								text: 'This is a sticky default notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Bottom Right Success (Sticky)
+						$('#bottom-right-success-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-right-container',
+								vPosition: 'bottom',
+								type: 'success',
+								title: 'Success',
+								text: 'This is a sticky successful notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Bottom Right Warning (Sticky)
+						$('#bottom-right-warning-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-right-container',
+								vPosition: 'bottom',
+								type: 'warning',
+								title: 'Warning',
+								text: 'This is a sticky warning notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Bottom Right Error (Sticky)
+						$('#bottom-right-error-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-right-container',
+								vPosition: 'bottom',
+								type: 'error',
+								title: 'Error',
+								text: 'This is a sticky error notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+				// Bottom Left
+					// Bottom Left Default (Sticky)
+						$('#bottom-left-default-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-left-container',
+								vPosition: 'bottom',
+								hPosition: 'left',
+								title: 'Default',
+								text: 'This is a sticky default notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Bottom Left Success (Sticky)
+						$('#bottom-left-success-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-left-container',
+								vPosition: 'bottom',
+								hPosition: 'left',
+								type: 'success',
+								title: 'Success',
+								text: 'This is a sticky successful notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Bottom Left Warning (Sticky)
+						$('#bottom-left-warning-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-left-container',
+								vPosition: 'bottom',
+								hPosition: 'left',
+								type: 'warning',
+								title: 'Warning',
+								text: 'This is a sticky warning notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+
+					// Bottom Left Error (Sticky)
+						$('#bottom-left-error-sticky').click(function() {
+							$('body').popGrowl({
+								id: 'growl-bottom-left-container',
+								vPosition: 'bottom',
+								hPosition: 'left',
+								type: 'error',
+								title: 'Error',
+								text: 'This is a sticky error notification, you\'ll have to click me to remove me...',
+								sticky: true
+							});
+						});
+		</script>
 
 </body>
 
