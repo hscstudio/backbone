@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Backbone v1.5, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/ -->
+<!-- Backbone v1.6, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/ -->
 
 <!--[if lt IE 7 ]><html class="no-js ie ie6" lang="en"><![endif]-->
 <!--[if IE 7 ]><html class="no-js ie ie7" lang="en"><![endif]-->
@@ -50,13 +50,15 @@
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/normalize.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="assets/css/tipsy.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/edge-alerts.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="assets/css/tipsy.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="assets/css/pop-growl.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/animations.min.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="assets/css/pro-bars.min.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/responsive-tabs.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/responsive-accordion.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/responsive-toggle.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="assets/css/pop-growl.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="assets/css/litebox.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/style.less" rel="stylesheet/less" type="text/css" media="all" />
 
 		<script type="text/javascript">less = { env: "development" };</script>
@@ -85,9 +87,9 @@
 		}(document, 'script', 'facebook-jssdk'));</script>
 
 	<!-- Header -->
-		<div class="container">
+		<div class="container bm-remove">
 			<div class="one-whole bm-remove">
-				<h1 class="bm-larger tm-larger text-center"><a href="https://github.com/hellojd/backbone" target="_blank">Backbone: A Responsive Framework v1.5</a></h1>
+				<h1 class="bm-larger tm-larger text-center"><a href="https://github.com/joemottershaw/backbone" target="_blank">Backbone: A Responsive Framework</a></h1>
 			</div>
 
 			<hr class="bm-larger" />
@@ -119,13 +121,15 @@
 								<a href="https://github.com/scottjehl/Respond" target="_blank">'respond.js'</a>,
 								<a href="https://gist.github.com/galambalazs/6477177" target="_blank">'smoothscroll.js'</a>,
 								<a href="http://jamesallardice.github.io/Placeholders.js/" target="_blank">'placeholders.js'</a>,
-								<a href="http://onehackoranother.com/projects/jquery/tipsy/" target="_blank">'tipsy'</a>,
 								<a href="https://github.com/joemottershaw/edge-alerts" target="_blank">'Edge Alerts'</a>,
+								<a href="http://onehackoranother.com/projects/jquery/tipsy/" target="_blank">'tipsy'</a>,
+								<a href="https://github.com/joemottershaw/pop-growl" target="_blank">'popGrowl'</a> notifications,
+								<a href="https://github.com/joemottershaw/animations" target="_blank">'Animations'</a>,
+								<a href="https://github.com/joemottershaw/pro-bars" target="_blank">'ProBars'</a>,
 								<a href="https://github.com/joemottershaw/responsive-tabs" target="_blank">'Responsive Tabs'</a>,
 								<a href="https://github.com/joemottershaw/responsive-accordion" target="_blank">'Responsive Accordion'</a>,
-								<a href="https://github.com/joemottershaw/responsive-toggle" target="_blank">'Responsive Toggle'</a>,
-								<a href="https://github.com/joemottershaw/pop-growl" target="_blank">'popGrowl'</a> notifications and
-								<a href="https://github.com/joemottershaw/animations" target="_blank">'Animations'</a>.
+								<a href="https://github.com/joemottershaw/responsive-toggle" target="_blank">'Responsive Toggle'</a> and
+								<a href="https://github.com/joemottershaw/litebox" target="_blank">'LiteBox'</a>.
 								Of course any of these files and plugins can be removed by simplying unlinking them to remove any unwanted bloat/load time.
 								It also includes the Facebook API, Facebook Opengraph and Twitter Card HTML snippets, links to fav icons and apple icons in the 'assets/imgs' directory. As well as the conditional statement classes on the 'html' element.
 							</p>
@@ -173,8 +177,8 @@
 							</p>
 
 							<p>
-								There are various types of what we are calling 'quickers', which are handy for easily adjusting and styling elements, things such as text alignment, text transformations/variants, element floating, element display, indentation and cursor symbols.
-								Font sizes can also be adjusted slightly by using the 'span' element and applying any of the font adjustment classes, this also works on header elements.
+								There are various types of what we are calling 'quickers', which are handy for easily adjusting and styling elements, things such as margin/paddings, text alignment, text transformations/variants, element floating, element display, indentation and cursor symbols.
+								Font sizes can also be adjusted slightly by using the 'span' element and applying any of the font adjustment classes (<code>font-xx-small</code>, <code>font-x-small</code>, <code>font-small</code>, <code>font-large</code>, <code>font-x-large</code> and <code>font-xx-large</code>).
 								All of these classes can be found in the 'backbone.less' file under the '#Quickers' section.
 							</p>
 						</div>
@@ -557,6 +561,21 @@
 				<hr class="bm-larger" />
 
 
+			<h1>Edge Alerts</h1>
+				<div class="clearfix">
+					<div class="one-whole">
+						<div class="indent-20">
+							<p class="bm-remove">To implement, please refer to the <a href="https://github.com/joemottershaw/edge-alerts/" target="_blank">Edge Alerts GitHub page</a> for documentation.</p>
+						</div>
+					</div>
+
+					<div class="one-half boxed text-center"><button id="alert" class="bm-remove">Alert</button></div>
+					<div class="one-half boxed text-center last"><button id="confirm" class="bm-remove">Confirm</button></div>
+				</div>
+
+				<hr class="bm-larger" />
+
+
 			<h1>Tipsy (Text Tooltips)</h1>
 				<div class="clearfix">
 					<div class="one-whole">
@@ -596,41 +615,6 @@
 						<div class="one-third boxed p-ten text-center tip-bl-fade cursor-pointer" data-tooltip="Class `tip-bl-fade`">South West</div>
 						<div class="one-third boxed p-ten text-center tip-b-fade cursor-pointer" data-tooltip="Class `tip-b-fade`">South</div>
 						<div class="one-third boxed p-ten text-center last tip-br-fade cursor-pointer" data-tooltip="Class `tip-br-fade`">South East</div>
-					
-					<p class="bm-larger">The animations also include zoom, bounce and spin effects, as well as various click and hover animations.</p>
-				</div>
-
-				<hr class="bm-larger" />
-
-
-			<h1>Edge Alerts</h1>
-				<div class="clearfix">
-					<div class="one-whole">
-						<div class="indent-20">
-							<p class="bm-remove">To implement, please refer to the <a href="https://github.com/joemottershaw/edge-alerts/" target="_blank">Edge Alerts GitHub page</a> for documentation.</p>
-						</div>
-					</div>
-
-					<div class="one-half boxed text-center"><button id="alert" class="bm-remove">Alert</button></div>
-					<div class="one-half boxed text-center last"><button id="confirm" class="bm-remove">Confirm</button></div>
-				</div>
-
-				<hr class="bm-larger" />
-
-
-			<h1>Animations</h1>
-				<div class="clearfix">
-					<div class="one-whole">
-						<div class="indent-20">
-							<p class="bm-remove">To implement, please refer to the <a href="https://github.com/joemottershaw/animations/" target="_blank">Animations GitHub page</a> for documentation.</p>
-						</div>
-					</div>
-
-					<p><strong>Fade Examples</strong></p>
-						<div class="one-quarter boxed text-center animate" data-anim-type="fadeInLeft" data-anim-delay="150">fadeInLeft</div>
-						<div class="one-quarter boxed text-center animate" data-anim-type="fadeInUp" data-anim-delay="300">fadeInUp</div>
-						<div class="one-quarter boxed text-center animate" data-anim-type="fadeInDown" data-anim-delay="450">fadeInDown</div>
-						<div class="one-quarter boxed text-center animate last" data-anim-type="fadeInRight" data-anim-delay="600">fadeInRight</div>
 					
 					<p class="bm-larger">The animations also include zoom, bounce and spin effects, as well as various click and hover animations.</p>
 				</div>
@@ -724,22 +708,114 @@
 				<hr class="bm-larger" />
 
 
+			<h1>Animations</h1>
+				<div class="clearfix">
+					<div class="one-whole">
+						<div class="indent-20">
+							<p class="bm-remove">To implement, please refer to the <a href="https://github.com/joemottershaw/animations/" target="_blank">Animations GitHub page</a> for documentation.</p>
+						</div>
+					</div>
+
+					<p><strong>Fade Examples</strong></p>
+						<div class="one-quarter boxed text-center animate" data-anim-type="fadeInLeft" data-anim-delay="150">fadeInLeft</div>
+						<div class="one-quarter boxed text-center animate" data-anim-type="fadeInUp" data-anim-delay="300">fadeInUp</div>
+						<div class="one-quarter boxed text-center animate" data-anim-type="fadeInDown" data-anim-delay="450">fadeInDown</div>
+						<div class="one-quarter boxed text-center animate last" data-anim-type="fadeInRight" data-anim-delay="600">fadeInRight</div>
+					
+					<p class="bm-larger">The animations also include zoom, bounce and spin effects, as well as various click and hover animations.</p>
+				</div>
+
+				<hr class="bm-larger" />
+
+
+			<h1>ProBars</h1>
+				<div class="clearfix">
+					<div class="one-whole">
+						<div class="indent-20">
+							<p>To implement, please refer to the <a href="https://github.com/joemottershaw/pro-bars/" target="_blank">ProBars GitHub page</a> for documentation.</p>
+						</div>
+
+						<div class="pro-bar-container color-green-sea tip-t-fade cursor-pointer" data-tooltip="100%">
+							<div class="pro-bar bar-100 color-turquoise" data-pro-bar-percent="100">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-nephritis tip-t-fade cursor-pointer" data-tooltip="90%">
+							<div class="pro-bar bar-90 color-emerald" data-pro-bar-percent="90" data-pro-bar-delay="100">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-belize-hole tip-t-fade cursor-pointer" data-tooltip="80%">
+							<div class="pro-bar bar-80 color-peter-river" data-pro-bar-percent="80" data-pro-bar-delay="200">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-wisteria tip-t-fade cursor-pointer" data-tooltip="70%">
+							<div class="pro-bar bar-70 color-amethyst" data-pro-bar-percent="70" data-pro-bar-delay="300">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-midnight-blue tip-t-fade cursor-pointer" data-tooltip="60%">
+							<div class="pro-bar bar-60 color-wet-asphalt" data-pro-bar-percent="60" data-pro-bar-delay="400">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-orange tip-t-fade cursor-pointer" data-tooltip="50%">
+							<div class="pro-bar bar-50 color-sun-flower" data-pro-bar-percent="50" data-pro-bar-delay="500">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-pumpkin tip-t-fade cursor-pointer" data-tooltip="40%">
+							<div class="pro-bar bar-40 color-carrot" data-pro-bar-percent="40" data-pro-bar-delay="600">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-pomegranate tip-t-fade cursor-pointer" data-tooltip="30%">
+							<div class="pro-bar bar-30 color-alizarin" data-pro-bar-percent="30" data-pro-bar-delay="700">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-silver tip-t-fade cursor-pointer" data-tooltip="20%">
+							<div class="pro-bar bar-20 color-clouds" data-pro-bar-percent="20" data-pro-bar-delay="800">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+
+						<div class="pro-bar-container color-asbestos tip-t-fade cursor-pointer" data-tooltip="10%">
+							<div class="pro-bar bar-10 color-concrete" data-pro-bar-percent="10" data-pro-bar-delay="900">
+								<div class="pro-bar-candy candy-rtl"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<hr class="bm-larger" />
+
+
 			<h1>Tabs</h1>
 				<div class="clearfix">
 					<div class="one-whole">
 						<div class="indent-20">
 							<p>To implement, please refer to the <a href="https://github.com/joemottershaw/responsive-tabs/" target="_blank">Responsive Tabs GitHub page</a> for documentation.</p>
 
-							<div class="tabs-default">
-								<ul class="tabs">
+							<div class="responsive-tabs-default">
+								<ul class="responsive-tabs">
 									<li><a href="#example-1-tab-1" target="_self">Tab One</a></li>
 									<li><a href="#example-1-tab-2" target="_self">Tab Two</a></li>
 									<li><a href="#example-1-tab-3" target="_self">Tab Three</a></li>
 								</ul>
 
-								<div class="tabs-content">
-									<div id="example-1-tab-1" class="tabs-panel">
-										<div class="tab-title"></div>
+								<div class="responsive-tabs-content">
+									<div id="example-1-tab-1" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac fringilla nulla, sit amet consequat eros. Pellentesque pharetra blandit commodo.
@@ -759,8 +835,8 @@
 											Maecenas tempor vehicula purus viverra pulvinar.
 										</p>
 									</div>
-									<div id="example-1-tab-2" class="tabs-panel">
-										<div class="tab-title"></div>
+									<div id="example-1-tab-2" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Cras sagittis neque id tortor dictum tincidunt. Nulla volutpat cursus metus, sed pulvinar nibh vulputate a. Curabitur tristique pharetra elit quis tincidunt.
@@ -780,8 +856,8 @@
 											Pellentesque pharetra dui convallis odio scelerisque pellentesque.
 										</p>
 									</div>
-									<div id="example-1-tab-3" class="tabs-panel">
-										<div class="tab-title"></div>
+									<div id="example-1-tab-3" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Mauris vel placerat dolor. Morbi mattis venenatis feugiat. Vivamus nunc diam, luctus id ipsum ut, tempor pharetra augue. Ut sagittis orci at posuere venenatis.
@@ -800,15 +876,15 @@
 									</div>
 								</div>
 
-								<ul class="tabs tabs-left">
+								<ul class="responsive-tabs responsive-tabs-left">
 									<li><a href="#example-2-tab-1" target="_self">Tab One</a></li>
 									<li><a href="#example-2-tab-2" target="_self">Tab Two</a></li>
 									<li><a href="#example-2-tab-3" target="_self">Tab Three</a></li>
 								</ul>
 
-								<div class="tabs-content tabs-left">
-									<div id="example-2-tab-1" class="tabs-panel">
-										<div class="tab-title"></div>
+								<div class="responsive-tabs-content responsive-tabs-left">
+									<div id="example-2-tab-1" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac fringilla nulla, sit amet consequat eros. Pellentesque pharetra blandit commodo.
@@ -828,8 +904,8 @@
 											Maecenas tempor vehicula purus viverra pulvinar.
 										</p>
 									</div>
-									<div id="example-2-tab-2" class="tabs-panel">
-										<div class="tab-title"></div>
+									<div id="example-2-tab-2" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Cras sagittis neque id tortor dictum tincidunt. Nulla volutpat cursus metus, sed pulvinar nibh vulputate a. Curabitur tristique pharetra elit quis tincidunt.
@@ -849,8 +925,8 @@
 											Pellentesque pharetra dui convallis odio scelerisque pellentesque.
 										</p>
 									</div>
-									<div id="example-2-tab-3" class="tabs-panel">
-										<div class="tab-title"></div>
+									<div id="example-2-tab-3" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Mauris vel placerat dolor. Morbi mattis venenatis feugiat. Vivamus nunc diam, luctus id ipsum ut, tempor pharetra augue. Ut sagittis orci at posuere venenatis.
@@ -869,15 +945,15 @@
 									</div>
 								</div>
 
-								<ul class="tabs tabs-right">
+								<ul class="responsive-tabs responsive-tabs-right">
 									<li><a href="#example-3-tab-1" target="_self">Tab One</a></li>
 									<li><a href="#example-3-tab-2" target="_self">Tab Two</a></li>
 									<li><a href="#example-3-tab-3" target="_self">Tab Three</a></li>
 								</ul>
 
-								<div class="tabs-content tabs-right">
-									<div id="example-3-tab-1" class="tabs-panel">
-										<div class="tab-title"></div>
+								<div class="responsive-tabs-content responsive-tabs-right">
+									<div id="example-3-tab-1" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac fringilla nulla, sit amet consequat eros. Pellentesque pharetra blandit commodo.
@@ -897,8 +973,8 @@
 											Maecenas tempor vehicula purus viverra pulvinar.
 										</p>
 									</div>
-									<div id="example-3-tab-2" class="tabs-panel">
-										<div class="tab-title"></div>
+									<div id="example-3-tab-2" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Cras sagittis neque id tortor dictum tincidunt. Nulla volutpat cursus metus, sed pulvinar nibh vulputate a. Curabitur tristique pharetra elit quis tincidunt.
@@ -918,8 +994,8 @@
 											Pellentesque pharetra dui convallis odio scelerisque pellentesque.
 										</p>
 									</div>
-									<div id="example-3-tab-3" class="tabs-panel">
-										<div class="tab-title"></div>
+									<div id="example-3-tab-3" class="responsive-tabs-panel">
+										<div class="responsive-tab-title"></div>
 
 										<p>
 											Mauris vel placerat dolor. Morbi mattis venenatis feugiat. Vivamus nunc diam, luctus id ipsum ut, tempor pharetra augue. Ut sagittis orci at posuere venenatis.
@@ -951,10 +1027,10 @@
 						<div class="indent-20">
 							<p>To implement, please refer to the <a href="https://github.com/joemottershaw/responsive-accordion/" target="_blank">Responsive Accordion GitHub page</a> for documentation.</p>
 
-							<ul class="accordion accordion-default">
+							<ul class="responsive-accordion responsive-accordion-default">
 								<li>
-									<div class="accordion-head">Section One <i class="fa fa-chevron-down plus fa-fw"></i><i class="fa fa-chevron-up minus fa-fw"></i></div>
-									<div class="accordion-panel">
+									<div class="responsive-accordion-head">Section One <i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw"></i></div>
+									<div class="responsive-accordion-panel">
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac fringilla nulla, sit amet consequat eros. Pellentesque pharetra blandit commodo.
 											Phasellus massa nisl, feugiat ac bibendum et, dictum id ipsum. Quisque sit amet accumsan tortor.
@@ -975,8 +1051,8 @@
 									</div>
 								</li>
 								<li>
-									<div class="accordion-head">Section Two <i class="fa fa-chevron-down plus fa-fw"></i><i class="fa fa-chevron-up minus fa-fw"></i></div>
-									<div class="accordion-panel">
+									<div class="responsive-accordion-head">Section Two <i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw"></i></div>
+									<div class="responsive-accordion-panel">
 										<p>
 											Cras sagittis neque id tortor dictum tincidunt. Nulla volutpat cursus metus, sed pulvinar nibh vulputate a. Curabitur tristique pharetra elit quis tincidunt.
 											Nulla sed libero hendrerit, condimentum velit tincidunt, sollicitudin tortor. Nulla volutpat lacinia tortor. Aenean auctor consectetur adipiscing.
@@ -997,8 +1073,8 @@
 									</div>
 								</li>
 								<li>
-									<div class="accordion-head">Section Three <i class="fa fa-chevron-down plus fa-fw"></i><i class="fa fa-chevron-up minus fa-fw"></i></div>
-									<div class="accordion-panel">
+									<div class="responsive-accordion-head">Section Three <i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw"></i></div>
+									<div class="responsive-accordion-panel">
 										<p>
 											Mauris vel placerat dolor. Morbi mattis venenatis feugiat. Vivamus nunc diam, luctus id ipsum ut, tempor pharetra augue. Ut sagittis orci at posuere venenatis.
 											Fusce at aliquam lacus. Sed id augue nisl. Nunc vitae ultricies dolor. Etiam rhoncus felis eget vulputate suscipit.
@@ -1029,10 +1105,10 @@
 						<div class="indent-20">
 							<p>To implement, please refer to the <a href="https://github.com/joemottershaw/responsive-toggle/" target="_blank">Responsive Toggle GitHub page</a> for documentation.</p>
 							
-							<ul class="toggle toggle-default">
+							<ul class="responsive-toggle responsive-toggle-default">
 								<li>
-									<div class="toggle-head">Toggle One <i class="fa fa-chevron-down plus fa-fw"></i><i class="fa fa-chevron-up minus fa-fw"></i></div>
-									<div class="toggle-panel">
+									<div class="responsive-toggle-head">Toggle One <i class="fa fa-chevron-down responsive-toggle-plus fa-fw"></i><i class="fa fa-chevron-up responsive-toggle-minus fa-fw"></i></div>
+									<div class="responsive-toggle-panel">
 										<p class="bm-remove">
 											Integer feugiat, nunc eu venenatis porttitor, tellus tortor sagittis enim, sed viverra mauris diam vel sem. Maecenas ac orci ipsum.
 											Nunc pellentesque purus at neque mattis consectetur. Pellentesque bibendum eros ante, ut aliquam nunc vestibulum ac. Praesent dignissim nibh ac nisl tempor ultricies.
@@ -1044,8 +1120,8 @@
 									</div>
 								</li>
 								<li>
-									<div class="toggle-head">Toggle Two <i class="fa fa-chevron-down plus fa-fw"></i><i class="fa fa-chevron-up minus fa-fw"></i></div>
-									<div class="toggle-panel">
+									<div class="responsive-toggle-head">Toggle Two <i class="fa fa-chevron-down responsive-toggle-plus fa-fw"></i><i class="fa fa-chevron-up responsive-toggle-minus fa-fw"></i></div>
+									<div class="responsive-toggle-panel">
 										<p class="bm-remove">
 											Ut mattis tempor semper. Praesent felis urna, tempus ac lobortis in, aliquam eget metus.
 											Nam imperdiet, augue sit amet vulputate tincidunt, dui libero ornare lacus, non adipiscing lacus dolor ac nulla. Maecenas ac lacinia neque.
@@ -1057,8 +1133,8 @@
 									</div>
 								</li>
 								<li>
-									<div class="toggle-head">Toggle Three <i class="fa fa-chevron-down plus fa-fw"></i><i class="fa fa-chevron-up minus fa-fw"></i></div>
-									<div class="toggle-panel">
+									<div class="responsive-toggle-head">Toggle Three <i class="fa fa-chevron-down responsive-toggle-plus fa-fw"></i><i class="fa fa-chevron-up responsive-toggle-minus fa-fw"></i></div>
+									<div class="responsive-toggle-panel">
 										<p class="bm-remove">
 											Maecenas sit amet tincidunt felis. Maecenas ut tortor posuere, faucibus leo non, auctor ante. Vivamus egestas lectus in mi aliquam, a sodales felis feugiat.
 											Fusce eget pulvinar augue. Sed in leo id nibh egestas sollicitudin. Praesent a consectetur sem. Morbi posuere nisl libero, sed tempor quam viverra vitae.
@@ -1075,78 +1151,84 @@
 
 				<hr class="bm-larger" />
 
-
-			<h1>Progress Bars</h1>
+			<h1>LiteBox</h1>
 				<div class="clearfix">
 					<div class="one-whole">
 						<div class="indent-20">
-							<p>To implement, please refer to the <a href="https://github.com/joemottershaw/animations/" target="_blank">Animations GitHub page</a> for documentation.</p>
-						</div>
+							<p>To implement, please refer to the <a href="https://github.com/joemottershaw/litebox/" target="_blank">LiteBox GitHub page</a> for documentation.</p>
+							
+							<div class="text-center">
+								<h3>Single Images</h3>
 
-						<div class="progress-bar-container color-green-sea tip-t-fade cursor-pointer" data-tooltip="100%">
-							<div class="progress-bar bar-100 color-turquoise" data-progress-bar-percent="100">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<p>
+									<a href="assets/imgs/001.jpg" target="_self" class="inline-block litebox"><img src="assets/imgs/001-thumb.jpg" class="inline-block" /></a>
+									<a href="assets/imgs/002.jpg" target="_self" class="inline-block litebox"><img src="assets/imgs/002-thumb.jpg" class="inline-block" /></a>
+									<a href="assets/imgs/003.jpg" target="_self" class="inline-block litebox"><img src="assets/imgs/003-thumb.jpg" class="inline-block" /></a>
+									<a href="assets/imgs/004.jpg" target="_self" class="inline-block litebox"><img src="assets/imgs/004-thumb.jpg" class="inline-block" /></a>
+								</p>
 
-						<div class="progress-bar-container color-nephritis tip-t-fade cursor-pointer" data-tooltip="90%">
-							<div class="progress-bar bar-90 color-emerald" data-progress-bar-percent="90" data-progress-bar-delay="100">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<p><small>Image Credits: <a href="http://littlevisuals.co/" target="_blank">Little Visuals</a></small></p>
 
-						<div class="progress-bar-container color-belize-hole tip-t-fade cursor-pointer" data-tooltip="80%">
-							<div class="progress-bar bar-80 color-peter-river" data-progress-bar-percent="80" data-progress-bar-delay="200">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<h3>Gallery Images</h3>
 
-						<div class="progress-bar-container color-wisteria tip-t-fade cursor-pointer" data-tooltip="70%">
-							<div class="progress-bar bar-70 color-amethyst" data-progress-bar-percent="70" data-progress-bar-delay="300">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<p>
+									<a href="assets/imgs/005.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1"><img src="assets/imgs/005-thumb.jpg" class="inline-block" /></a>
+									<a href="assets/imgs/006.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1"><img src="assets/imgs/006-thumb.jpg" class="inline-block" /></a>
+									<a href="assets/imgs/007.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1"><img src="assets/imgs/007-thumb.jpg" class="inline-block" /></a>
+									<a href="assets/imgs/008.jpg" target="_self" class="inline-block litebox" data-litebox-group="group-1"><img src="assets/imgs/008-thumb.jpg" class="inline-block" /></a>
+								</p>
 
-						<div class="progress-bar-container color-midnight-blue tip-t-fade cursor-pointer" data-tooltip="60%">
-							<div class="progress-bar bar-60 color-wet-asphalt" data-progress-bar-percent="60" data-progress-bar-delay="400">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<p><small>Image Credits: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
 
-						<div class="progress-bar-container color-orange tip-t-fade cursor-pointer" data-tooltip="50%">
-							<div class="progress-bar bar-50 color-sun-flower" data-progress-bar-percent="50" data-progress-bar-delay="500">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<h3>Embedded Content</h3>
 
-						<div class="progress-bar-container color-pumpkin tip-t-fade cursor-pointer" data-tooltip="40%">
-							<div class="progress-bar bar-40 color-carrot" data-progress-bar-percent="40" data-progress-bar-delay="600">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<a href="https://www.youtube.com/watch?v=gOLY7bjCTTE" target="_self" class="button litebox" data-litebox-group="group-2">YouTube</a>
+								<a href="http://vimeo.com/45427826" target="_self" class="button litebox" data-litebox-group="group-2">Vimeo</a>
+								<a href="http://www.dailymotion.com/video/x15wmv4_alexander-rusinov-extreme-workout_sport" target="_self" class="button litebox" data-litebox-group="group-2">Daily Motion</a>
+								<a href="https://www.kickstarter.com/projects/1523379957/oculus-rift-step-into-the-game/" target="_self" class="button litebox" data-litebox-group="group-2">KickStarter</a>
 
-						<div class="progress-bar-container color-pomegranate tip-t-fade cursor-pointer" data-tooltip="30%">
-							<div class="progress-bar bar-30 color-alizarin" data-progress-bar-percent="30" data-progress-bar-delay="700">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<h3>Others</h3>
 
-						<div class="progress-bar-container color-silver tip-t-fade cursor-pointer" data-tooltip="20%">
-							<div class="progress-bar bar-20 color-clouds" data-progress-bar-percent="20" data-progress-bar-delay="800">
-								<div class="progress-bar-candy candy-rtl"></div>
-							</div>
-						</div>
+								<a href="http://www.bing.com" target="_self" class="button litebox" data-litebox-group="group-3">Iframe</a>
+								<a href="#inline-html-1" target="_self" class="button litebox" data-litebox-group="group-3">Inline HTML 1</a>
+								<a href="#inline-html-2" target="_self" class="button litebox" data-litebox-group="group-3">Inline HTML 2</a>
 
-						<div class="progress-bar-container color-asbestos tip-t-fade cursor-pointer" data-tooltip="10%">
-							<div class="progress-bar bar-10 color-concrete" data-progress-bar-percent="10" data-progress-bar-delay="900">
-								<div class="progress-bar-candy candy-rtl"></div>
+								<div class="no-display">
+									<div id="inline-html-1">
+										<h1 class="bm-large tm-large">Inline HTML Example</h1>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+									</div>
+
+									<div id="inline-html-2">
+										<h1 class="bm-large tm-large">Scrollable Inline HTML Example</h1>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+										<p class="bm-large">In here you can pull any elements from the page to display in the Litebox</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<hr class="bm-larger" />
-
 
 			<h1>Conclusion</h1>
 				<div class="clearfix">
@@ -1177,13 +1259,17 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<script src="assets/js/smoothscroll.js" type="text/javascript"></script>
 		<script src="assets/js/placeholders.min.js" type="text/javascript"></script>
-		<script src="assets/js/tipsy.js" type="text/javascript"></script>
+		<script src="assets/js/visible.min.js" type="text/javascript"></script>
+		<script src="assets/js/images-loaded.min.js" type="text/javascript"></script>
 		<script src="assets/js/edge-alerts.min.js" type="text/javascript"></script>
+		<script src="assets/js/tipsy.js" type="text/javascript"></script>
+		<script src="assets/js/pop-growl.min.js" type="text/javascript"></script>
 		<script src="assets/js/animations.min.js" type="text/javascript"></script>
+		<script src="assets/js/pro-bars.min.js" type="text/javascript"></script>
 		<script src="assets/js/responsive-tabs.min.js" type="text/javascript"></script>
 		<script src="assets/js/responsive-accordion.min.js" type="text/javascript"></script>
 		<script src="assets/js/responsive-toggle.min.js" type="text/javascript"></script>
-		<script src="assets/js/pop-growl.min.js" type="text/javascript"></script>
+		<script src="assets/js/litebox.min.js" type="text/javascript"></script>
 		<script src="assets/js/backbone.js" type="text/javascript"></script>
 
 		<script>
@@ -1574,6 +1660,9 @@
 								sticky: true
 							});
 						});
+
+
+			$('.litebox').liteBox();						
 		</script>
 
 </body>

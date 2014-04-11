@@ -1,7 +1,7 @@
-Backbone v1.5
+Backbone v1.6
 =============
 
-A simple to use HTML, LESS/CSS and JavaScript/jQuery responsive framework (or foundation/boilerplate) to help with rapid protyping and development of websites for use on Desktop, Laptops, Tablets and Mobile devices.
+A simple to use HTML, LESS/CSS and JavaScript/jQuery responsive framework (or foundation/boilerplate) to help with rapid protyping and development of websites for use on Desktop, Laptops, Tablets and Mobile devices. Comes packaged with various types of files and plugins to help get started developing.
 
 **Demo:** http://www.cloud-eight.com/github/backbone/
 
@@ -44,6 +44,12 @@ https://gist.github.com/galambalazs/6477177
 
 placeholders.js, James Allardice<br />
 https://github.com/jamesallardice/Placeholders.js
+
+Visible.js, TeamDF, Digital Fusion<br />
+http://www.teamdf.com
+
+ImagesLoaded, desandro<br />
+http://imagesloaded.desandro.com/
 
 tipsy.js, Jason Frame<br />
 https://github.com/jaz303/tipsy
