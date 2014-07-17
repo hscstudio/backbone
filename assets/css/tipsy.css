@@ -7,14 +7,16 @@
 
 	.tipsy {
 		padding: 5px;
-		font-size: .8em;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 9px;
+		line-height: normal;
 		position: absolute;
 		z-index: 100000;
 	}   
 
 	.tipsy-inner {
 		max-width: 300px;
-		padding: 0 6px;
+		padding: 6px;
 		background-color: #000;
 		color: #FFF;
 		text-align: center;

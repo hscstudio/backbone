@@ -1,4 +1,4 @@
-/*	Responsive Toggle v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+/*	Responsive Toggle v1.2, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	========================================================================================= */
 
 /*	Table of Contents
@@ -15,21 +15,6 @@
 		padding: 0;
 		list-style-type: none;
 	}
-
-	/* For use in conjunction with the Backbone Responsive Framework - https://github.com/joemottershaw/backbone */
-		.responsive-toggle.bm-remove	{ margin-bottom: 0;    }
-		.responsive-toggle.bm-smaller	{ margin-bottom: 5px;  }
-		.responsive-toggle.bm-small		{ margin-bottom: 10px; }
-		.responsive-toggle.bm-medium	{ margin-bottom: 20px; }
-		.responsive-toggle.bm-large		{ margin-bottom: 30px; }
-		.responsive-toggle.bm-larger	{ margin-bottom: 40px; }
-
-		.responsive-toggle.tm-remove	{ margin-top: 0;    }
-		.responsive-toggle.tm-smaller	{ margin-top: 5px;  }
-		.responsive-toggle.tm-small		{ margin-top: 10px; }
-		.responsive-toggle.tm-medium	{ margin-top: 20px; }
-		.responsive-toggle.tm-large		{ margin-top: 30px; }
-		.responsive-toggle.tm-larger	{ margin-top: 40px; }
 
 	.responsive-toggle li {
 		margin: 0 0 10px 0;

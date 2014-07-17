@@ -1,4 +1,4 @@
-//	Backbone v1.6, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.7, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
@@ -121,6 +121,7 @@
 			display: block;
 			width: 940px;
 			min-width: 280px;
+			min-height: 1px;
 			margin: 0 auto 20px auto;
 			padding: 0;
 			position: relative;
@@ -142,6 +143,7 @@
 			.one-quarter,
 			.two-quarter,
 			.three-quarter {
+				min-height: 1px;
 				margin-right: 20px;
 				margin-bottom: 20px;
 				position: relative;
@@ -203,6 +205,7 @@
 		.one-quarter-percent,
 		.two-quarter-percent,
 		.three-quarter-percent {
+			min-height: 1px;
 			margin-bottom: 20px;
 			position: relative;
 			float: left;
@@ -603,7 +606,7 @@
 			display: inline-block;
 			margin: 0 0 20px;
 
-			&:hover			{ cursor: pointer; }
+			&:hover { cursor: pointer; }
 		}
 	
 	// Inputs
@@ -645,6 +648,10 @@
 			&.h-small		{ height: 30px; font-size: 80%;  }
 			&.h-medium		{ height: 40px; font-size: 100%; }
 			&.h-large		{ height: 50px; font-size: 120%; }
+
+			&.success		{ border-color: #74BE93; }
+			&.warning		{ border-color: #EAAF51; }
+			&.error			{ border-color: #C3665D; }
 		}
 
 		input.w-small,
@@ -670,7 +677,7 @@
 		textarea.w-full		{ max-width: 100%;  }
 
 		select,
-		select[multiple]	{ padding: 6px }
+		select[multiple]	{ padding: 6px; cursor: pointer; }
 
 		select[multiple]	{ height: auto !important; }
 
@@ -702,7 +709,7 @@
 		input[type="button"] {
 			display: inline-block;
 			min-width: 125px;
-			height: 40px;
+			min-height: 40px;
 			margin: 0 0 20px;
 			outline: none;
 			border: 1px @button-border-style @button-border-color;
@@ -729,9 +736,22 @@
 			&.w-large		{ min-width: 150px; }
 			&.w-full		{ width: 100%;      }
 
-			&.h-small		{ height: 30px; font-size: 80%;  }
-			&.h-medium		{ height: 40px; font-size: 100%; }
-			&.h-large		{ height: 50px; font-size: 120%; }
+			&.h-small		{ min-height: 30px; font-size: 80%;  }
+			&.h-medium		{ min-height: 40px; font-size: 100%; }
+			&.h-large		{ min-height: 50px; font-size: 120%; }
+
+			&.disabled {
+				border-color: greyscale(darken(@button-border-color, 10%));
+				background: greyscale(darken(@button-background-color, 10%));
+				color: greyscale(darken(@button-font-color, 10%));
+
+				&:hover,
+				&:active {
+					border-color: greyscale(darken(@button-border-color, 10%));
+					background: greyscale(darken(@button-background-color, 10%));
+					color: greyscale(darken(@button-font-color, 10%));
+				}
+			}
 
 			&:hover {
 				border-color: @button-border-color-hover;
@@ -869,7 +889,7 @@
 		.text-right		{ text-align: right		!important; }
 		.text-justify	{ text-align: justify	!important; }
 
-		.element-center	{ margin-left: auto; margin-right: auto; }
+		.element-center	{ margin-left: auto; margin-right: auto; float: none; }
 	
 	// Transformations and Variants
 		.text-capitalize	{ text-transform: capitalize; }
@@ -877,8 +897,14 @@
 		.text-lowercase		{ text-transform: lowercase;  }
 		.text-small-caps	{ font-variant: small-caps;   }
 
+		.no-text-overflow {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
 	// Link Overrides
-		.no-decoration		{ text-decoration: none !important; }
+		.no-decoration { text-decoration: none !important; }
 
 	// Indents
 		.indent-10	{ padding-left: 10px; padding-right: 10px;   }

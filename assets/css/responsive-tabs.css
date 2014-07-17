@@ -1,4 +1,4 @@
-/*	Responsive Tabs v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+/*	Responsive Tabs v1.4, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	======================================================================================= */
 
 /*	Table of Contents
@@ -17,21 +17,6 @@
 			list-style-type: none;
 			position: relative;
 		}
-
-		/* For use in conjunction with the Backbone Responsive Framework - https://github.com/joemottershaw/backbone */
-			.responsive-tabs.bm-remove	{ margin-bottom: 0;    }
-			.responsive-tabs.bm-smaller	{ margin-bottom: 5px;  }
-			.responsive-tabs.bm-small	{ margin-bottom: 10px; }
-			.responsive-tabs.bm-medium	{ margin-bottom: 20px; }
-			.responsive-tabs.bm-large	{ margin-bottom: 30px; }
-			.responsive-tabs.bm-larger	{ margin-bottom: 40px; }
-
-			.responsive-tabs.tm-remove	{ margin-top: 0;    }
-			.responsive-tabs.tm-smaller	{ margin-top: 5px;  }
-			.responsive-tabs.tm-small	{ margin-top: 10px; }
-			.responsive-tabs.tm-medium	{ margin-top: 20px; }
-			.responsive-tabs.tm-large	{ margin-top: 30px; }
-			.responsive-tabs.tm-larger	{ margin-top: 40px; }
 
 		.responsive-tabs li {
 			width: 125px;

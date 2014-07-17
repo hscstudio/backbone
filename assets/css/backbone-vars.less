@@ -1,4 +1,4 @@
-//	Backbone v1.6, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.7, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
@@ -24,25 +24,17 @@
 		@secondary-color-grey: greyscale(@secondary-color);
 
 		@body-background-color: #F0F0F0;
-		@body-font-color: #888888;
-		@body-font-family: Verdana, Geneva, sans-serif;
-		@body-font-weight: normal;
-		@body-font-size: .8em;
-		@body-line-height: 2em;
-
-		@link-color: @primary-color;
-		@link-color-hover: lighten(@primary-color, 10%);
 
 	// Scrollbars (WebKit)
 		@-webkit-scrollbar-size: 7px;
 		@-webkit-scrollbar-radius: 0;
-		@-webkit-scrollbar-color: lighten(greyscale(@primary-color), 20%);
+		@-webkit-scrollbar-color: darken(@primary-color-grey, 10%);
 		@-webkit-scrollbar-color-hover: lighten(@-webkit-scrollbar-color, 5%);
 		@-webkit-scrollbar-color-active: darken(@-webkit-scrollbar-color, 5%);
 		@-webkit-scrollbar-track-color: lighten(@-webkit-scrollbar-color, 30%);
 
 	// Scrollbars (IE)
-		@ie-scrollbar-face-color: lighten(greyscale(@primary-color), 20%);
+		@ie-scrollbar-face-color: lighten(@primary-color-grey, 20%);
 		@ie-scrollbar-3dlight-color: lighten(@ie-scrollbar-face-color, 10%);
 		@ie-scrollbar-highlight-color: lighten(@ie-scrollbar-face-color, 15%);
 		@ie-scrollbar-track-color: @primary-color-grey;
@@ -64,6 +56,15 @@
 		@grid-boxed-background: #FFFFFF;
 
 	// Typography
+		@body-font-color: #888888;
+		@body-font-family: Verdana, Geneva, sans-serif;
+		@body-font-size: .8em;
+		@body-font-weight: normal;
+		@body-line-height: 2em;
+
+		@link-color: @primary-color;
+		@link-color-hover: lighten(@primary-color, 10%);
+
 		@horizontal-line-size: 1px;
 		@horizontal-line-style: solid;
 		@horizontal-line-color: #E2E2E2;
@@ -131,8 +132,8 @@
 		@input-border-left-size: 1px;
 		@input-border-style: solid;
 		@input-border-color: #E2E2E2;
-		@input-border-color-hover: darken(#E2E2E2, 5%);
-		@input-border-color-focus: darken(#E2E2E2, 10%);
+		@input-border-color-hover: darken(@input-border-color, 5%);
+		@input-border-color-focus: darken(@input-border-color, 10%);
 		@input-border-top-left-radius: 0px;
 		@input-border-top-right-radius: 0px;
 		@input-border-bottom-right-radius: 0px;
@@ -186,14 +187,6 @@
 		@no-script-font-color: #7B7B7B;
 		@no-script-link-color: @primary-color;
 		@no-script-link-color-hover: lighten(@primary-color, 10%);
-
-	// Tipsy Tooltips
-		@tipsy-padding: 6px;
-		@tipsy-border-radius: 3px;
-		@tipsy-background-color: #000000;
-		@tipsy-font-color: #FFFFFF;
-		@tipsy-font-family: Verdana, Geneva, sans-serif;
-		@tipsy-font-size: .8em;
 
 
 //	#Custom Variables

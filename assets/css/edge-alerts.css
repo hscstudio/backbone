@@ -1,4 +1,4 @@
-/*	Edge Alerts v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+/*	Edge Alerts v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	=================================================================================== */
 
 /*	Table of Contents
@@ -10,6 +10,13 @@
 /*	#Default
 //	================================================== */
 
+	.edge-alerts-overlay,
+	.edge-alerts-overlay > * {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
 	.edge-alerts-overlay {
 		display: none;
 		width: 100%;
@@ -17,7 +24,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 99999999;
+		z-index: 99999;
 	}
 
 	.edge-alerts-overlay .edge-alerts-clear {
@@ -38,6 +45,11 @@
 		position: absolute;
 		top: 20px;
 		right: 20px;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
 	}
 
 	.edge-alerts-overlay .edge-alerts-close:hover {
@@ -135,13 +147,9 @@
 			text-align: center;
 		}
 
-		.edge-alerts-overlay .edge-alerts-close {
-			display: none;
-		}
+		.edge-alerts-overlay .edge-alerts-close { display: none; }
 
-		.edge-alerts-overlay .edge-alerts-popup-buttons {
-			text-align: center;
-		}
+		.edge-alerts-overlay .edge-alerts-popup-buttons { text-align: center; }
 
 		.edge-alerts-overlay button.edge-alerts-popup-cancel,
 		.edge-alerts-overlay button.edge-alerts-popup-continue {
