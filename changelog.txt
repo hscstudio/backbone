@@ -11,6 +11,7 @@ Version 1.8 - Sep 5, 2014
 - Added 'vertical-center' and 'pos-zero' classes to #quickers section
 - Added 'desktop-tablet', 'tablet-mobile' and 'mobile' classes/media queries to be used with 'float-*' for float removal
 - Removed mixin: 'gradient-overlay'
+- Updated LiteBox plugin
 - Updated mixins: 'gradient-linear' and 'gradient-radial'
 - Updated all CDN files to latest versions
 - Updated demo

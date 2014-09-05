@@ -9,16 +9,16 @@ A simple to use HTML, LESS/CSS and JavaScript/jQuery responsive framework (or fo
 Plugins Included
 ================
 
-<a href="https://gist.github.com/galambalazs/6477177" target="_blank">SmoothScroll</a>
-<a href="https://github.com/jamesallardice/Placeholders.js" target="_blank">Placeholders</a>
-<a href="https://github.com/jaz303/tipsy" target="_blank">Tipsy</a>
-<a href="https://github.com/joemottershaw/animations" target="_blank">Animations</a>
-<a href="https://github.com/joemottershaw/edge-alerts" target="_blank">EdgeAlerts</a>
-<a href="https://github.com/joemottershaw/pop-growl" target="_blank">PopGrowl</a>
-<a href="https://github.com/joemottershaw/pro-bars" target="_blank">ProBars</a>
-<a href="https://github.com/joemottershaw/litebox" target="_blank">Litebox</a>
-<a href="https://github.com/joemottershaw/responsive-tabs" target="_blank">Responsive Tabs</a>
-<a href="https://github.com/joemottershaw/responsive-accordion" target="_blank">Responsive Accordion</a>
+<a href="https://gist.github.com/galambalazs/6477177" target="_blank">SmoothScroll</a><br />
+<a href="https://github.com/jamesallardice/Placeholders.js" target="_blank">Placeholders</a><br />
+<a href="https://github.com/jaz303/tipsy" target="_blank">Tipsy</a><br />
+<a href="https://github.com/joemottershaw/animations" target="_blank">Animations</a><br />
+<a href="https://github.com/joemottershaw/edge-alerts" target="_blank">EdgeAlerts</a><br />
+<a href="https://github.com/joemottershaw/pop-growl" target="_blank">PopGrowl</a><br />
+<a href="https://github.com/joemottershaw/pro-bars" target="_blank">ProBars</a><br />
+<a href="https://github.com/joemottershaw/litebox" target="_blank">Litebox</a><br />
+<a href="https://github.com/joemottershaw/responsive-tabs" target="_blank">Responsive Tabs</a><br />
+<a href="https://github.com/joemottershaw/responsive-accordion" target="_blank">Responsive Accordion</a><br />
 <a href="https://github.com/joemottershaw/responsive-toggle" target="_blank">Responsive Toggle</a>
 
 
