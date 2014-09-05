@@ -1,4 +1,4 @@
-Backbone v1.8
+Backbone v1.7
 =============
 
 A simple to use HTML, LESS/CSS and JavaScript/jQuery responsive framework (or foundation/boilerplate) to help with rapid protyping and development of websites for use on Desktop, Laptops, Tablets and Mobile devices. Comes packaged with various types of files and plugins to help get started developing.

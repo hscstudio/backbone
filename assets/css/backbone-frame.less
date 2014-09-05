@@ -1,4 +1,4 @@
-//	Backbone v1.8, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.7, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
@@ -23,11 +23,7 @@
 //	==================================================
 
 	// Page
-		html,
-		body {
-			min-width: 300px;
-			height: 100%;
-		}
+		html { height: 100%; }
 
 		body {
 			height: 100%;
@@ -387,14 +383,7 @@
 //	==================================================
 		
 	// Paragraphs
-		p {
-			margin: 0 0 20px;
-
-			&.darker { color: darken(@body-font-color, 20%); }
-			&.dark { color: darken(@body-font-color, 10%); }
-			&.light { color: lighten(@body-font-color, 10%); }
-			&.lighter { color: lighten(@body-font-color, 20%); }
-		}
+		p { margin: 0 0 20px; }
 
 	// Links
 		a {
@@ -411,20 +400,6 @@
 			&:focus {
 				color: @link-color-hover;
 				text-decoration: none;
-			}
-
-			&.darker { color: darken(@link-color, 20%); }
-			&.dark { color: darken(@link-color, 10%); }
-			&.light { color: lighten(@link-color, 10%); }
-			&.lighter { color: lighten(@link-color, 20%); }
-
-			&.no-color {
-				color: @body-font-color;
-
-				&.darker { color: darken(@body-font-color, 20%); }
-				&.dark { color: darken(@body-font-color, 10%); }
-				&.light { color: lighten(@body-font-color, 10%); }
-				&.lighter { color: lighten(@body-font-color, 20%); }
 			}
 		}
 
@@ -445,6 +420,16 @@
 		}
 
 	// Headers
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0 0 20px;
+			padding: 0;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: normal;
+			letter-spacing: 0;
+		}
+
 		h1 {
 			color: @h1-font-color;
 			font-family: @h1-font-family;
@@ -453,11 +438,6 @@
 			font-variant: @h1-font-variant;
 			text-transform: @h1-text-transform;
 			letter-spacing: @h1-letter-spacing;
-
-			&.darker { color: darken(@h1-font-color, 20%); }
-			&.dark { color: darken(@h1-font-color, 10%); }
-			&.light { color: lighten(@h1-font-color, 10%); }
-			&.lighter { color: lighten(@h1-font-color, 20%); }
 		}
 
 		h2 {
@@ -468,11 +448,6 @@
 			font-variant: @h2-font-variant;
 			text-transform: @h2-text-transform;
 			letter-spacing: @h2-letter-spacing;
-
-			&.darker { color: darken(@h2-font-color, 20%); }
-			&.dark { color: darken(@h2-font-color, 10%); }
-			&.light { color: lighten(@h2-font-color, 10%); }
-			&.lighter { color: lighten(@h2-font-color, 20%); }
 		}
 
 		h3 {
@@ -483,11 +458,6 @@
 			font-variant: @h3-font-variant;
 			text-transform: @h3-text-transform;
 			letter-spacing: @h3-letter-spacing;
-
-			&.darker { color: darken(@h3-font-color, 20%); }
-			&.dark { color: darken(@h3-font-color, 10%); }
-			&.light { color: lighten(@h3-font-color, 10%); }
-			&.lighter { color: lighten(@h3-font-color, 20%); }
 		}
 
 		h4 {
@@ -498,11 +468,6 @@
 			font-variant: @h4-font-variant;
 			text-transform: @h4-text-transform;
 			letter-spacing: @h4-letter-spacing;
-
-			&.darker { color: darken(@h4-font-color, 20%); }
-			&.dark { color: darken(@h4-font-color, 10%); }
-			&.light { color: lighten(@h4-font-color, 10%); }
-			&.lighter { color: lighten(@h4-font-color, 20%); }
 		}
 
 		h5 {
@@ -513,11 +478,6 @@
 			font-variant: @h5-font-variant;
 			text-transform: @h5-text-transform;
 			letter-spacing: @h5-letter-spacing;
-
-			&.darker { color: darken(@h5-font-color, 20%); }
-			&.dark { color: darken(@h5-font-color, 10%); }
-			&.light { color: lighten(@h5-font-color, 10%); }
-			&.lighter { color: lighten(@h5-font-color, 20%); }
 		}
 
 		h6 {
@@ -528,30 +488,6 @@
 			font-variant: @h6-font-variant;
 			text-transform: @h6-text-transform;
 			letter-spacing: @h6-letter-spacing;
-
-			&.darker { color: darken(@h6-font-color, 20%); }
-			&.dark { color: darken(@h6-font-color, 10%); }
-			&.light { color: lighten(@h6-font-color, 10%); }
-			&.lighter { color: lighten(@h6-font-color, 20%); }
-		}
-
-		h1, h2, h3, h4, h5, h6 {
-			margin: 0 0 20px;
-			padding: 0;
-			font-weight: normal;
-			font-variant: normal;
-			text-transform: none;
-			line-height: normal;
-			letter-spacing: 0;
-
-			&.no-color {
-				color: @body-font-color;
-
-				&.darker { color: darken(@body-font-color, 20%); }
-				&.dark { color: darken(@body-font-color, 10%); }
-				&.light { color: lighten(@body-font-color, 10%); }
-				&.lighter { color: lighten(@body-font-color, 20%); }
-			}
 		}
 	
 	// Quotes
@@ -620,24 +556,6 @@
 						clear: both;
 						visibility: hidden;
 					}
-
-					&.ap-smaller	{ padding-left: 5px;  }
-					&.ap-small		{ padding-left: 10px; }
-					&.ap-medium		{ padding-left: 20px; }
-					&.ap-large		{ padding-left: 30px; }
-					&.ap-larger		{ padding-left: 40px; }
-
-					&.op-smaller	{ padding-right: 5px;  }
-					&.op-small		{ padding-right: 10px; }
-					&.op-medium		{ padding-right: 20px; }
-					&.op-large		{ padding-right: 30px; }
-					&.op-larger		{ padding-right: 40px; }
-
-					&.aop-smaller	{ padding-right: 5px; padding-left: 5px;   }
-					&.aop-small		{ padding-right: 10px; padding-left: 10px; }
-					&.aop-medium	{ padding-right: 20px; padding-left: 20px; }
-					&.aop-large		{ padding-right: 30px; padding-left: 30px; }
-					&.aop-larger	{ padding-right: 40px; padding-left: 40px; }
 				}
 			}
 
@@ -653,11 +571,7 @@
 			padding: 2px 5px;
 			background: #FFFFFF;
 			color: #DD1144;
-			white-space: pre-wrap;
-			white-space: -moz-pre-wrap;
-			white-space: -pre-wrap;
-			white-space: -o-pre-wrap;
-			word-wrap: break-word;
+			white-space: nowrap;
 			.transition();
 
 			&:hover { border-color: darken(#DDD, 5%); }
@@ -731,13 +645,9 @@
 			&:hover			{ border-color: @input-border-color-hover; }
 			&:focus 		{ border-color: @input-border-color-focus; }
 
-			&.h-small		{ height: 30px; }
-			&.h-medium		{ height: 40px; }
-			&.h-large		{ height: 50px; }
-
-			&.f-small		{ font-size: 80%;  }
-			&.f-medium		{ font-size: 100%; }
-			&.f-large		{ font-size: 120%; }
+			&.h-small		{ height: 30px; font-size: 80%;  }
+			&.h-medium		{ height: 40px; font-size: 100%; }
+			&.h-large		{ height: 50px; font-size: 120%; }
 
 			&.success		{ border-color: #74BE93; }
 			&.warning		{ border-color: #EAAF51; }
@@ -779,8 +689,7 @@
 			&.mono		{ font-family: 'Courier New', Courier, monospace; }
 			&.no-resize	{ resize: none; }
 
-			&.h-small	{ height: 80px;  }
-			&.h-medium	{ height: 120px; }
+			&.h-small	{ height: 80px; }
 			&.h-large	{ height: 160px; }
 		}
 		
@@ -819,8 +728,7 @@
 			text-align: center;
 			text-transform: @button-text-transform;
 			letter-spacing: @button-letter-spacing;
-			line-height: 40px;
-			cursor: pointer;
+			line-height: normal;
 			.transition();
 
 			&.w-small		{ min-width: 100px; }
@@ -828,13 +736,9 @@
 			&.w-large		{ min-width: 150px; }
 			&.w-full		{ width: 100%;      }
 
-			&.h-small		{ min-height: 30px; line-height: 30px; }
-			&.h-medium		{ min-height: 40px; line-height: 40px; }
-			&.h-large		{ min-height: 50px; line-height: 50px; }
-
-			&.f-small		{ font-size: 80%;  }
-			&.f-medium		{ font-size: 100%; }
-			&.f-large		{ font-size: 120%; }
+			&.h-small		{ min-height: 30px; font-size: 80%;  }
+			&.h-medium		{ min-height: 40px; font-size: 100%; }
+			&.h-large		{ min-height: 50px; font-size: 120%; }
 
 			&.disabled {
 				border-color: greyscale(darken(@button-border-color, 10%));
@@ -860,6 +764,16 @@
 				background: @button-background-color-click;
 				color: @button-font-color-click;
 			}
+		}
+
+		.button,
+		a.button {
+			line-height: 40px;
+			cursor: pointer;
+
+			&.h-small	{ line-height: 30px; }
+			&.h-medium	{ line-height: 40px; }
+			&.h-large	{ line-height: 50px; }
 		}
 
 	// Fix for odd Mozilla border & padding issues
@@ -948,19 +862,19 @@
 		.remove-bottom-margin	{ margin-bottom: 0	!important; }
 		.remove-left-margin		{ margin-left: 0	!important; }
 
-		.bm-remove	{ margin-bottom: 0		!important; }
-		.bm-smaller	{ margin-bottom: 5px	!important; }
-		.bm-small	{ margin-bottom: 10px	!important; }
-		.bm-medium	{ margin-bottom: 20px	!important; }
-		.bm-large	{ margin-bottom: 30px	!important; }
-		.bm-larger	{ margin-bottom: 40px	!important; }
+		.bm-remove	{ margin-bottom: 0 !important;    }
+		.bm-smaller	{ margin-bottom: 5px !important;  }
+		.bm-small	{ margin-bottom: 10px !important; }
+		.bm-medium	{ margin-bottom: 20px !important; }
+		.bm-large	{ margin-bottom: 30px !important; }
+		.bm-larger	{ margin-bottom: 40px !important; }
 
-		.tm-remove	{ margin-top: 0		!important; }
-		.tm-smaller	{ margin-top: 5px	!important; }
-		.tm-small	{ margin-top: 10px	!important; }
-		.tm-medium	{ margin-top: 20px	!important; }
-		.tm-large	{ margin-top: 30px	!important; }
-		.tm-larger	{ margin-top: 40px	!important; }
+		.tm-remove	{ margin-top: 0 !important;    }
+		.tm-smaller	{ margin-top: 5px !important;  }
+		.tm-small	{ margin-top: 10px !important; }
+		.tm-medium	{ margin-top: 20px !important; }
+		.tm-large	{ margin-top: 30px !important; }
+		.tm-larger	{ margin-top: 40px !important; }
 
 	// Padding Overides
 		.remove-padding			{ padding: 0		!important; }
@@ -975,27 +889,7 @@
 		.text-right		{ text-align: right		!important; }
 		.text-justify	{ text-align: justify	!important; }
 
-		.element-center	{
-			margin-left: auto;
-			margin-right: auto;
-			float: none;
-		}
-
-		.vertical-center {
-			position: relative;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-		}
-
-		.pos-zero {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
+		.element-center	{ margin-left: auto; margin-right: auto; float: none; }
 	
 	// Transformations and Variants
 		.text-capitalize	{ text-transform: capitalize; }
@@ -1032,10 +926,10 @@
 		.float-right	{ float: right; }
 	
 	// Display
-		.no-display		{ display: none !important; }
-		.no-visibility	{ visibility: hidden !important; }
-		.block			{ display: block; }
-		.inline-block	{ display: inline-block; }
+		.no-display		{ display: none				!important; }
+		.no-visibility	{ visibility: hidden		!important; }
+		.block			{ display: block;                       }
+		.inline-block	{ display: inline-block;                }
 
 	// Cursors
 		.cursor-auto			{ cursor: auto; }
@@ -1070,22 +964,3 @@
 		.cursor-sw-resize		{ cursor: sw-resize; }
 		.cursor-nesw-resize		{ cursor: nesw-resize; }
 		.cursor-nwse-resize		{ cursor: nwse-resize; }
-
-	// Media Queries
-		@media @desktop-tablet {
-			.float-right {
-				&.desktop-tablet { float: none; }
-			}
-		}
-
-		@media @tablet-mobile {
-			.float-right {
-				&.tablet-mobile { float: none; }
-			}
-		}
-
-		@media @mobile {
-			.float-right {
-				&.mobile { float: none; }
-			}
-		}
