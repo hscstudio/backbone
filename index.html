@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Backbone v1.7, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/ -->
+<!-- Backbone v1.8, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/ -->
 
 <!--[if lt IE 7 ]><html class="no-js ie ie6" lang="en"><![endif]-->
 <!--[if IE 7 ]><html class="no-js ie ie7" lang="en"><![endif]-->
@@ -13,7 +13,7 @@
 		<title>Backbone: A Responsive Framework</title>
 
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 		<meta name="description" content="" />
@@ -47,7 +47,7 @@
 		<link href="assets/images/apple-icon-152.png" rel="apple-touch-icon" sizes="152x152" />
 
 	<!-- Stylesheets -->
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/normalize.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/tipsy.css" rel="stylesheet" type="text/css" media="all" />
@@ -61,13 +61,42 @@
 		<link href="assets/css/responsive-toggle.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="assets/css/style.less" rel="stylesheet/less" type="text/css" media="all" />
 
-		<script type="text/javascript">less = { env: "development" };</script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.6.3/less.min.js" type="text/javascript"></script>
+		<!--<link href="assets/css/style.min.css" rel="stylesheet" type="text/css" media="all" />-->
 
-	<!-- HTML5 SHIV -->
+	<!-- JavaScript (with CDN fallbacks) -->
+		<script type="text/javascript">less = { env: "development" };</script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.4/less.min.js" type="text/javascript"></script>
+
+		<script>window.less || document.write('<script src="assets/js/cdn-fallback-less.min.js"><\/script>');</script>
+
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+		<script>window.jQuery || document.write('<script src="assets/js/cdn-fallback-jquery.min.js"><\/script>');</script>
+		<script>window.jQuery.ui || document.write('<script src="assets/js/cdn-fallback-jquery-ui.min"><\/script>');</script>
+
+		<script src="assets/js/smoothscroll.min.js" type="text/javascript"></script>
+		<script src="assets/js/placeholders.min.js" type="text/javascript"></script>
+		<script src="assets/js/appear.min.js" type="text/javascript"></script>
+		<script src="assets/js/images-loaded.min.js" type="text/javascript"></script>
+		<script src="assets/js/tipsy.min.js" type="text/javascript"></script>
+		<script src="assets/js/animations.min.js" type="text/javascript"></script>
+		<script src="assets/js/edge-alerts.min.js" type="text/javascript"></script>
+		<script src="assets/js/pop-growl.min.js" type="text/javascript"></script>
+		<script src="assets/js/pro-bars.min.js" type="text/javascript"></script>
+		<script src="assets/js/litebox.min.js" type="text/javascript"></script>
+		<script src="assets/js/responsive-tabs.min.js" type="text/javascript"></script>
+		<script src="assets/js/responsive-accordion.min.js" type="text/javascript"></script>
+		<script src="assets/js/responsive-toggle.min.js" type="text/javascript"></script>
+		<script src="assets/js/backbone.js" type="text/javascript"></script>
+
+	<!-- HTML5 SHIV (with CDN fallbacks) -->
 		<!--[if lt IE 9]>
-			<script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+
+			<script>window.html5 || document.write('<script src="assets/js/cdn-fallback-html5-shiv.min.js"><\/script>');</script>
+			<script>window.respond || document.write('<script src="assets/js/cdn-fallback-respond.min.js"><\/script>');</script>
 		<![endif]-->
 
 	<!-- Google Analytics -->
@@ -123,7 +152,7 @@
 								<a href="http://jamesallardice.github.io/Placeholders.js/" target="_blank">'placeholders.js'</a>,
 								<a href="https://github.com/joemottershaw/edge-alerts" target="_blank">'Edge Alerts'</a>,
 								<a href="http://onehackoranother.com/projects/jquery/tipsy/" target="_blank">'tipsy'</a>,
-								<a href="https://github.com/joemottershaw/pop-growl" target="_blank">'popGrowl'</a> notifications,
+								<a href="https://github.com/joemottershaw/pop-growl" target="_blank">'popGrowl'</a>,
 								<a href="https://github.com/joemottershaw/animations" target="_blank">'Animations'</a>,
 								<a href="https://github.com/joemottershaw/pro-bars" target="_blank">'ProBars'</a>,
 								<a href="https://github.com/joemottershaw/responsive-tabs" target="_blank">'Responsive Tabs'</a>,
@@ -144,32 +173,18 @@
 				<hr class="bm-larger" />
 
 
-			<h1>Usage</h1>
-				<div class="clearfix">
-					<div class="one-whole">
-						<div class="indent-20">
-							<p>
-								Simply copy the 'backbone' directory to your workflow area, rename the 'backbone' directory to the project you are working on and start developing from within this directory using the 'index.html' page as your base. To use in your root directory, copy the files from within the 'backbone' directory into your root directory.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<hr class="bm-larger" />
-
-
 			<h1>Developing</h1>
 				<div class="clearfix">
 					<div class="one-whole">
 						<div class="indent-20">
 							<p>
-								The Framework uses LESS for its ease of use and in-browser compiling in the development process, as recommended by the creators of LESS themselves, it is advised to pre-compile your LESS to CSS when your site is in production mode.
-								The 'backbone.less' file in the assets folder has various variables you can adjust to completely change the color scheme of your design such as document/browser color values, typography and forms etc.
+								The Framework uses LESS and it's recommended to only use it in Development mode and compile all the LESS files into a minimized CSS file (provided and commented out), you can use <a href="http://www.lesstester.com" target="_blank">LessTester</a> to compile and minimize your code.
+								The 'backbone-vars.less' file in the assets folder has various variables you can adjust to completely change the color scheme of your design such as document/browser color values, typography and forms etc to get you started.
 							</p>
 
 							<p>
 								All commonly used block elements default bottom margin is set to 20 pixels, these can adjusted by simply using the classes: <code>bm-remove</code>(0px), <code>bm-smaller</code> (5px), <code>bm-small</code> (10px), <code>bm-medium</code> (Default: 20px), <code>bm-large</code> (30px) and <code>bm-larger</code> (40px).
-								If you wish to adjust the top margin of these elements as well, you can use the same class structure with one slight difference which is by altering 'bm' (Bottom Margin) to 'tm' (Top Margin).
+								If you wish to adjust the top margin of these elements as well, you can use the same class structure with a different prefix: <code>tm-*</code>.
 							</p>
 
 							<p>
@@ -178,8 +193,12 @@
 
 							<p>
 								There are various types of what we are calling 'quickers', which are handy for easily adjusting and styling elements, things such as margin/paddings, text alignment, text transformations/variants, element floating, element display, indentation and cursor symbols.
-								Font sizes can also be adjusted slightly by using the 'span' element and applying any of the font adjustment classes (<code>font-xx-small</code>, <code>font-x-small</code>, <code>font-small</code>, <code>font-large</code>, <code>font-x-large</code> and <code>font-xx-large</code>).
-								All of these classes can be found in the 'backbone.less' file under the '#Quickers' section.
+								Font sizes can also be adjusted by using the 'span' element and applying any of the font adjustment classes (<code>font-xx-small</code>, <code>font-x-small</code>, <code>font-small</code>, <code>font-large</code>, <code>font-x-large</code> and <code>font-xx-large</code>).
+								All of these classes can be found in the 'backbone-frame.less' file under the '#Quickers' section.
+							</p>
+
+							<p>
+								As well as the use of classes in your HTML, there is also a 'backbone-mixins.less' file for quickly adding various styles to your CSS which include browser prefixes, this file is definitely worth a look!
 							</p>
 						</div>
 					</div>
@@ -196,7 +215,7 @@
 								Fixed grid layouts are used through the <code>one-half</code>, <code>one-quarter</code>, <code>two-quarter</code>, <code>three-quarter</code>, <code>one-third</code> and <code>two-third</code> classes.</pre>
 								A container element must wrapped around these classes using the <code>container</code> class.
 								For the last column, the <code>last</code> class should be applied to stop any page/template breakages.
-								By default, there are style values with grid columns, you can add the <code>boxed</code> class to add a 20px padding, background and border (set in less.css), you can adjust the padding using the <code>p-ten</code>, <code>p-twenty</code>, <code>p-thirty</code>, <code>p-fourty</code> or <code>p-fifty</code> classes.
+								By default, there are style values with grid columns, you can add the <code>boxed</code> class to add a 20px padding, background and border (set in 'backbone-vars.less'), you can adjust the padding using the <code>p-ten</code>, <code>p-twenty</code>, <code>p-thirty</code>, <code>p-fourty</code> or <code>p-fifty</code> classes.
 								Grid elements stack vertically when the viewport is less than 768 pixels.
 							</p>
 						</div>
@@ -246,7 +265,7 @@
 								The <code>boxed</code> class can also be applied along with a <code>p-*</code> class to add padding.
 								However, percentage grids differ from fixed grids in a few ways, first of all they are fluid to the containing element, meaning they can be placed within any element.
 								They don't use a 20px gutter to separate columns and they do not stack vertically the same way as fixed grids do.
-								To stack vertically in specific viewports, use the <code>desktop-tablet</code> or <code>tablet-mobile</code> class, depending on what device you wish for the elements to start stacking vertically. However, they will stack vertically when the viewport is less than 480 pixels.
+								To stack vertically in specific viewports, use the <code>desktop-tablet</code> or <code>tablet-mobile</code> class, depending on what device you wish for the elements to start stacking vertically. However, they will stack vertically when the viewport is less than 480 pixels (<code>mobile</code>).
 							</p>
 						</div>
 					</div>
@@ -424,7 +443,9 @@
 							<p>
 								Styling lists is as simple as applying 2 classes, either <code>unstyled</code> which removes any list style types, padding and margins. The other class <code>inline</code> forces all list items to one line.
 								You can also apply <code>circle</code>, <code>disk</code> or <code>square</code> classes to the 'ul' element for different list style types.
-								The <code>bm-*</code> and <code>tm-*</code> classes can also be applied to both unordered and ordered lists.
+							</p>
+							<p>
+								It is also possible to adjust the left and right paddings of <code>li</code> elements using a set of classes, for the left/alpha padding: <code>ap-smaller</code> (5px), <code>ap-small</code> (10px), <code>ap-medium</code> (20px), <code>ap-larger</code> (30px) and <code>ap-larger</code> (40px). To adjust the right/omega padding, you can use the same class structure but by altering the prefix to <code>op-*</code>. To apply to both sides, alpha and omega, use the same class structure with the prefix <code>aop-*</code>.
 							</p>
 
 							<div class="one-half-percent tablet">
@@ -512,28 +533,32 @@
 								Button elements also stack vertically but not until the viewport is less than 480 pixels.
 							</p>
 
+							<p>
+								You can also adjust the font size to help match the sizes you apply for inputs and buttons using the classes: `f-small` (80%), `f-medium` (100%) and `f-large` (120%).
+							</p>
+
 							<form>
-								<input type="text" class="w-small h-small" placeholder="Small Input Field" />
+								<input type="text" class="w-small h-small f-small" placeholder="Small Input Field" />
 								<input type="text" placeholder="Default Input Field" />
-								<input type="text" class="w-large h-large" placeholder="Large Input Field" />
+								<input type="text" class="w-large h-large f-large" placeholder="Large Input Field" />
 								<input type="text" class="w-full" placeholder="Full Width Input Field" />
 
-								<select class="w-small h-small">
+								<select class="w-small h-small f-small">
 									<option>Small Select Field</option>
 								</select>
 								<select>
 									<option>Default Select Field</option>
 								</select>
-								<select class="w-large h-large">
+								<select class="w-large h-large f-large">
 									<option>Large Select Field</option>
 								</select>
 								<select class="w-full">
 									<option>Full Width Select Field</option>
 								</select>
 
-								<textarea class="w-small h-small">Small Textarea</textarea>
+								<textarea class="w-small h-small f-small">Small Textarea</textarea>
 								<textarea>Default Textarea</textarea>
-								<textarea class="w-large h-large">Large Textarea</textarea>
+								<textarea class="w-large h-large f-large">Large Textarea</textarea>
 								<textarea class="w-full">Full Width Textarea</textarea>
 
 								<div class="one-half-percent mobile">
@@ -548,9 +573,9 @@
 									<input type="radio" id="radio-3" /> <label for="radio-3" class="bm-remove">Radio 3</label>
 								</div>
 
-								<button class="w-small h-small">Small Button</button><br />
+								<button class="w-small h-small f-small">Small Button</button><br />
 								<button>Default Button</button><br />
-								<button class="w-large h-large">Large Button</button><br />
+								<button class="w-large h-large f-large">Large Button</button><br />
 								<button class="w-small h-small">Small Button With A Lot Of Placeholder Text</button><br />
 								<button class="w-full">Full Width Button</button>
 							</form>
@@ -631,37 +656,37 @@
 					<div class="one-half text-center">
 						<h4>Top Left Notification (Timer)</h4>
 
-						<button id="top-left-default" class="w-small h-small">Default</button>
-						<button id="top-left-success" class="w-small h-small">Success</button>
-						<button id="top-left-warning" class="w-small h-small">Warning</button>
-						<button id="top-left-error" class="w-small h-small">Error</button>
+						<button id="top-left-default" class="w-small h-small f-small">Default</button>
+						<button id="top-left-success" class="w-small h-small f-small">Success</button>
+						<button id="top-left-warning" class="w-small h-small f-small">Warning</button>
+						<button id="top-left-error" class="w-small h-small f-small">Error</button>
 					</div>
 
 					<div class="one-half text-center last">
 						<h4>Top Right Notification (Timer)</h4>
 
-						<button id="top-right-default" class="w-small h-small">Default</button>
-						<button id="top-right-success" class="w-small h-small">Success</button>
-						<button id="top-right-warning" class="w-small h-small">Warning</button>
-						<button id="top-right-error" class="w-small h-small">Error</button>
+						<button id="top-right-default" class="w-small h-small f-small">Default</button>
+						<button id="top-right-success" class="w-small h-small f-small">Success</button>
+						<button id="top-right-warning" class="w-small h-small f-small">Warning</button>
+						<button id="top-right-error" class="w-small h-small f-small">Error</button>
 					</div>
 
 					<div class="one-half text-center">
 						<h4>Bottom Left Notification (Timer)</h4>
 
-						<button id="bottom-left-default" class="w-small h-small">Default</button>
-						<button id="bottom-left-success" class="w-small h-small">Success</button>
-						<button id="bottom-left-warning" class="w-small h-small">Warning</button>
-						<button id="bottom-left-error" class="w-small h-small">Error</button>
+						<button id="bottom-left-default" class="w-small h-small f-small">Default</button>
+						<button id="bottom-left-success" class="w-small h-small f-small">Success</button>
+						<button id="bottom-left-warning" class="w-small h-small f-small">Warning</button>
+						<button id="bottom-left-error" class="w-small h-small f-small">Error</button>
 					</div>
 
 					<div class="one-half text-center last">
 						<h4>Bottom Right Notification (Timer)</h4>
 
-						<button id="bottom-right-default" class="w-small h-small">Default</button>
-						<button id="bottom-right-success" class="w-small h-small">Success</button>
-						<button id="bottom-right-warning" class="w-small h-small">Warning</button>
-						<button id="bottom-right-error" class="w-small h-small">Error</button>
+						<button id="bottom-right-default" class="w-small h-small f-small">Default</button>
+						<button id="bottom-right-success" class="w-small h-small f-small">Success</button>
+						<button id="bottom-right-warning" class="w-small h-small f-small">Warning</button>
+						<button id="bottom-right-error" class="w-small h-small f-small">Error</button>
 					</div>
 
 					<hr class="bm-larger" />
@@ -669,37 +694,37 @@
 					<div class="one-half text-center">
 						<h4>Top Left Notification (Sticky)</h4>
 
-						<button id="top-left-default-sticky" class="w-small h-small">Default</button>
-						<button id="top-left-success-sticky" class="w-small h-small">Success</button>
-						<button id="top-left-warning-sticky" class="w-small h-small">Warning</button>
-						<button id="top-left-error-sticky" class="w-small h-small">Error</button>
+						<button id="top-left-default-sticky" class="w-small h-small f-small">Default</button>
+						<button id="top-left-success-sticky" class="w-small h-small f-small">Success</button>
+						<button id="top-left-warning-sticky" class="w-small h-small f-small">Warning</button>
+						<button id="top-left-error-sticky" class="w-small h-small f-small">Error</button>
 					</div>
 
 					<div class="one-half text-center last">
 						<h4>Top Right Notification (Sticky)</h4>
 
-						<button id="top-right-default-sticky" class="w-small h-small">Default</button>
-						<button id="top-right-success-sticky" class="w-small h-small">Success</button>
-						<button id="top-right-warning-sticky" class="w-small h-small">Warning</button>
-						<button id="top-right-error-sticky" class="w-small h-small">Error</button>
+						<button id="top-right-default-sticky" class="w-small h-small f-small">Default</button>
+						<button id="top-right-success-sticky" class="w-small h-small f-small">Success</button>
+						<button id="top-right-warning-sticky" class="w-small h-small f-small">Warning</button>
+						<button id="top-right-error-sticky" class="w-small h-small f-small">Error</button>
 					</div>
 
 					<div class="one-half text-center">
 						<h4>Bottom Left Notification (Sticky)</h4>
 
-						<button id="bottom-left-default-sticky" class="w-small h-small">Default</button>
-						<button id="bottom-left-success-sticky" class="w-small h-small">Success</button>
-						<button id="bottom-left-warning-sticky" class="w-small h-small">Warning</button>
-						<button id="bottom-left-error-sticky" class="w-small h-small">Error</button>
+						<button id="bottom-left-default-sticky" class="w-small h-small f-small">Default</button>
+						<button id="bottom-left-success-sticky" class="w-small h-small f-small">Success</button>
+						<button id="bottom-left-warning-sticky" class="w-small h-small f-small">Warning</button>
+						<button id="bottom-left-error-sticky" class="w-small h-small f-small">Error</button>
 					</div>
 
 					<div class="one-half text-center last">
 						<h4>Bottom Right Notification (Sticky)</h4>
 
-						<button id="bottom-right-default-sticky" class="w-small h-small">Default</button>
-						<button id="bottom-right-success-sticky" class="w-small h-small">Success</button>
-						<button id="bottom-right-warning-sticky" class="w-small h-small">Warning</button>
-						<button id="bottom-right-error-sticky" class="w-small h-small">Error</button>
+						<button id="bottom-right-default-sticky" class="w-small h-small f-small">Default</button>
+						<button id="bottom-right-success-sticky" class="w-small h-small f-small">Success</button>
+						<button id="bottom-right-warning-sticky" class="w-small h-small f-small">Warning</button>
+						<button id="bottom-right-error-sticky" class="w-small h-small f-small">Error</button>
 					</div>
 				</div>
 
@@ -1263,24 +1288,6 @@
 			<p class="bm-larger"><a href="#" target="_self" class="scroll-to-top">SCROLL TO TOP</a></p>
 		</div>
 
-	<!-- JavaScript -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-		<script src="assets/js/smoothscroll.min.js" type="text/javascript"></script>
-		<script src="assets/js/placeholders.min.js" type="text/javascript"></script>
-		<script src="assets/js/appear.min.js" type="text/javascript"></script>
-		<script src="assets/js/images-loaded.min.js" type="text/javascript"></script>
-		<script src="assets/js/tipsy.min.js" type="text/javascript"></script>
-		<script src="assets/js/animations.min.js" type="text/javascript"></script>
-		<script src="assets/js/edge-alerts.min.js" type="text/javascript"></script>
-		<script src="assets/js/pop-growl.min.js" type="text/javascript"></script>
-		<script src="assets/js/pro-bars.min.js" type="text/javascript"></script>
-		<script src="assets/js/litebox.min.js" type="text/javascript"></script>
-		<script src="assets/js/responsive-tabs.min.js" type="text/javascript"></script>
-		<script src="assets/js/responsive-accordion.min.js" type="text/javascript"></script>
-		<script src="assets/js/responsive-toggle.min.js" type="text/javascript"></script>
-		<script src="assets/js/backbone.js" type="text/javascript"></script>
-
 		<script>
 			// Dialogs
 				$('#alert').click(function() {
@@ -1669,9 +1676,7 @@
 								sticky: true
 							});
 						});
-
-
-			$('.litebox').liteBox();						
+												
 		</script>
 
 </body>
