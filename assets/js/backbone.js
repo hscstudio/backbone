@@ -1,9 +1,10 @@
-//	Backbone v1.7, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.8, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
 //	==================================================
 //		#Tipsy
+//		#Litebox
 //		#Scroll To Top
 
 
@@ -29,6 +30,14 @@
 		$('.tip-b-fade').tipsy({ gravity: 'n', html: true, title: 'data-tooltip', offset: 5, fade: true, fadeSpeed: 150, live: true });
 		$('.tip-bl-fade').tipsy({ gravity: 'ne', html: true, title: 'data-tooltip', offset: 5, fade: true, fadeSpeed: 150, live: true });
 		$('.tip-l-fade').tipsy({ gravity: 'e', html: true, title: 'data-tooltip', offset: 5, fade: true, fadeSpeed: 150, live: true });
+
+
+//	#Litebox
+//	==================================================
+
+	$(document).ready(function() {
+		$('.litebox').liteBox();
+	});
 
 
 //	#Scroll To Top

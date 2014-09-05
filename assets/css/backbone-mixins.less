@@ -1,4 +1,4 @@
-//	Backbone v1.7, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Backbone v1.8, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================
 
 //	Table of Contents
@@ -58,6 +58,23 @@
 			right: @right;
 		}
 
+		.position-zero() {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
+	// Vertically Align
+		.vertically-align() {
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
 	// Border Radius
 		.border-radius(@rad: 5px) {
 			-webkit-border-radius: @rad;
@@ -104,7 +121,6 @@
 
 	// Gradients
 		.gradient-linear(@origin: top, @from: #FFFFFF, @to: #000000) {
-			background-color: @from;
 			background-image: -webkit-linear-gradient(@origin, @from, @to);
 			background-image: -moz-linear-gradient(@origin, @from, @to);
 			background-image: -o-linear-gradient(@origin, @from, @to);
@@ -112,21 +128,26 @@
 			background-image: linear-gradient(@origin, @from, @to);
 		}
 
-		.gradient-radial(@shape: circle, @from: #FFF, @to: #000) {
-			background: @from;
-			background: -webkit-radial-gradient(@shape, @from, @to);
-			background: -moz-radial-gradient(@shape, @from, @to);
-			background: -o-radial-gradient(@shape, @from, @to);
-			background: radial-gradient(@shape, @from, @to);
-
+		.gradient-linear-alpha(@origin: top, @from-r: 255, @from-g: 255, @from-b: 255, @from-a: 1, @to-r: 0, @to-g: 0, @to-b: 0, @to-a: 1) {
+			background-image: -webkit-linear-gradient(@origin, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
+			background-image: -moz-linear-gradient(@origin, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
+			background-image: -o-linear-gradient(@origin, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
+			background-image: -ms-linear-gradient(@origin, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
+			background-image: linear-gradient(@origin, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
 		}
 
-		.gradient-overlay(@origin: top, @alpha: 0.2) {
-			background-image: -webkit-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-			background-image: -moz-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-			background-image: -o-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-			background-image: -ms-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
-			background-image: linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
+		.gradient-radial(@shape: circle, @from: #FFF, @to: #000) {
+			background-image: -webkit-radial-gradient(@shape, @from, @to);
+			background-image: -moz-radial-gradient(@shape, @from, @to);
+			background-image: -o-radial-gradient(@shape, @from, @to);
+			background-image: radial-gradient(@shape, @from, @to);
+		}
+
+		.gradient-radial-alpha(@shape: circle, @from-r: 255, @from-g: 255, @from-b: 255, @from-a: 1, @to-r: 0, @to-g: 0, @to-b: 0, @to-a: 1) {
+			background-image: -webkit-radial-gradient(@shape, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
+			background-image: -moz-radial-gradient(@shape, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
+			background-image: -o-radial-gradient(@shape, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
+			background-image: radial-gradient(@shape, rgba(@from-r, @from-g, @from-b, @from-a), rgba(@to-r, @to-g, @to-b, @to-a));
 		}
 
 	// Opacity

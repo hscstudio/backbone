@@ -1,0 +1,80 @@
+Version 1.8 - Sep 5, 2014
+- Added min-width to 'body' and 'html'
+- Added CDN fallbacks
+- Added IE Conditional to 'X-UA-Compatible' meta data
+- Added litebox init to 'backbone.js' (moved from 'index.html')
+- Added mixins: 'position-zero', 'vertically-align', 'gradient-linear-alpha' and 'gradient-radial-alpha'
+- Added 'darker', 'dark', 'light' and 'lighter' classes to 'p', 'h1-h6' elements
+- Added 'no-color' class with 'darker-lighter' classes to 'a' and 'h1-h6' elements
+- Added 'ap-*', 'op-*' and 'aop-*' classes to inline 'li' elements
+- Added 'f-small', 'f-medium' and 'f-large' classes for font size adjustments on form inputs/buttons
+- Added 'vertical-center' and 'pos-zero' classes to #quickers section
+- Added 'desktop-tablet', 'tablet-mobile' and 'mobile' classes/media queries to be used with 'float-*' for float removal
+- Removed mixin: 'gradient-overlay'
+- Updated mixins: 'gradient-linear' and 'gradient-radial'
+- Updated all CDN files to latest versions
+- Updated demo
+
+Version 1.7 - Jul 17, 2014
+- Updated all plugins to latest versions
+- Added min-height to container and grid elements
+- Added min-height to buttons
+- Added '.disabled' class styles for buttons
+- Added no float to 'element-center'
+- Added '.no-text-overflow' class
+
+Version 1.6 - Apr 11, 2014
+- Added 'ProBars' and 'LiteBox' plugins
+- Updated all plugins to latest versions
+- Updated 'bm-*' and 'tm-*' classes to be outside of nested elements (now available to any block level element)
+- Updated demo
+
+Version 1.5 - Mar 31, 2014
+- Added 'Edge Alerts' plugin
+- Added 'popGrowl' notifications plugin
+- Fixed letter-spacing duplicate in 'backbone-frame.less' button elements
+- Added default text-align value in 'backbone-frame.less' button elements
+- Updated Demo
+
+Version 1.4 - Mar 13, 2014
+- Added 'alpha' and 'omega' gutter classes to percentage grid columns
+- Added variables for individual borders and border radius on grid boxed column elements
+- Added variables for individual borders and border radius on input elements
+- Added variables for individual borders and border radius on button elements
+- Added variables for individual borders and border radius on noscript element
+- Added more text/font options for header elements
+- Added more text/font options for input elements
+- Added more text/font options for button elements
+- Added credits to 'README.md'
+- Updated 'Animations' plugin to latest version (v1.3)
+- Updated 'Responsive Accordion' plugin to latest version (v1.1.1)
+- Updated 'Responsive Tabs' plugin to latest version (v1.2.1)
+- Updated 'Responsive Toggle' plugin to latest version (v1.0.1)
+- Updated 'LESS' to a CDN hosted solution
+- Updated vertical stacking classes for percentage grid columns
+- Updated demo and documentation
+- Fixed 'min-width' issues of grid container/columns
+- Fixed 'scale' mixin issues (added 'scale-origin' mixin)
+- Added 'border-radius' to fixed grid 'boxed' columns
+- Added 'alpha/omega' classes to percent grid columns for spacing
+
+Version 1.3 - Mar 4, 2014
+- Fixed grid/column width issues in mobile media queries
+- Fixed CDN URLs of HTML5 Shiv and respond.js
+- Updated 'Animations' plugin
+- Updated 'backbone-vars.less' with more variables
+- Updated 'backbone-frame.less' to accommodate new variables
+- Updated 'backbone-frame.less' with some new element values
+- Updated 'backbone.js' with 5px offset to Tipsy tooltips
+- Updated 'style.less' with '#Global' section
+
+Version 1.2 - Feb 18, 2014
+- Added 'tipsy' tooltip plugin
+- Updated plugins
+- Updated demo page
+
+Version 1.1 - Feb 17, 2014
+- Updated file/directory structure
+
+Version 1.0 - Feb 11, 2014
+- Initial Commit
